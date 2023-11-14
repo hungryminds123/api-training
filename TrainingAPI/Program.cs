@@ -13,7 +13,17 @@ namespace TrainingAPI
      * Automapper
      * Repository Patterm
      * Dependency Injection in .Net Copre
-     * 
+     *
+     *
+     *
+     *
+     *Middlware
+     * Generic Exception Handler
+     * Modify Swagger Response/ Explain Swagger
+     * Request Pipeline .Net Core
+     * Kestrel Server
+     * Securing Web API  - Json Web Token
+     *
      */
     public class Program
     {
