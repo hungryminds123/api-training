@@ -1,6 +1,7 @@
 using Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using TrainingAPI.Extensions;
 
 namespace TrainingAPI
 {
@@ -30,7 +31,10 @@ namespace TrainingAPI
             {
                 x.UseSqlServer("Server=.;Database=EFLearning;Trusted_Connection=True;TrustServerCertificate=True");
             });
-            
+
+
+            builder.Services.ConfigurePersistenceServices();
+            builder.Services.ConfigureCoreServices();
             
             
             builder.Services.AddSwaggerGen();
