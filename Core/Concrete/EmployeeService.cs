@@ -1,8 +1,6 @@
 ﻿using Core.Interfaces;
 using Core.Mapper;
 using Core.ViewModels;
-using Domain;
-using Persistence.Repositories.Concrete;
 using Persistence.Repositories.Interface;
 
 namespace Core.Concrete
