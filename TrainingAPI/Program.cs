@@ -1,7 +1,8 @@
 using Domain;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using TrainingAPI.Extensions;
+using FluentValidation;
+using Core.Validators;
 
 namespace TrainingAPI
 {
@@ -12,9 +13,9 @@ namespace TrainingAPI
      * Fluent Validations
      * Automapper
      * Repository Patterm
-     * Dependency Injection in .Net Copre
-     *
-     *
+     * Dependency Injection in .Net Copre  - Transient, Scoped and Sigleton
+     * Reading Appsetting.json
+     * CORS - Cross Orgin Resource Policy (http://localhost:4200 , http://localhost:4300
      *
      *
      *Middlware
@@ -31,9 +32,30 @@ namespace TrainingAPI
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
             // Add services to the container.
 
             builder.Services.AddControllers();
+
+
+            builder.Services.AddCors();
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  policy =>
+                                  {
+                                      policy.WithOrigins("http://example.com",
+                                                "http://www.contoso.com")
+                                                .AllowAnyHeader()
+                                                .AllowAnyMethod();
+                                  });
+            });
+
+
+            builder.Services.AddValidatorsFromAssemblyContaining<EmployeeViewModelValidator>();
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
 
@@ -42,11 +64,10 @@ namespace TrainingAPI
                 x.UseSqlServer("Server=.;Database=EFLearning;Trusted_Connection=True;TrustServerCertificate=True");
             });
 
-
             builder.Services.ConfigurePersistenceServices();
             builder.Services.ConfigureCoreServices();
-            
-            
+
+            //builder.Services.AddTransient<IValidator<EmployeeViewModel>, EmployeeViewModelValidator>();
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
@@ -57,6 +78,8 @@ namespace TrainingAPI
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseHttpsRedirection();
 

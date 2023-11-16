@@ -11,14 +11,39 @@ namespace Core.Concrete
 
         public EmployeeService(IEmployeeRepository employeeRepository)
         {
-          _employeeRepository = employeeRepository;
+            _employeeRepository = employeeRepository;
         }
 
-        public  IEnumerable<EmployeeViewModel> GetAllEmployees()
+        public async Task<IEnumerable<EmployeeViewModel>> GetAllEmployees()
         {
-            var response = _employeeRepository.GetAll();
+            var response = await _employeeRepository.GetAll();
 
             return response.ConvertToEmployeeViewModel();
         }
+
+        public async Task<EmployeeViewModel> GetEmployeeById(int id)
+        {
+            var data = await _employeeRepository.Get(id);
+
+            return data.ConvertToEmployeeViewModel();
+
+        }
+
+        public async Task<bool> InsertEmployee(EmployeeViewModel employee)
+        {
+          var data =   await _employeeRepository.Add(employee.ConvertToEmployee());
+
+            if(data != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+       
     }
 }

@@ -14,29 +14,33 @@ namespace Persistence.Repositories.Concrete
         }
 
 
-        public Task<T> Add(T entity)
+        public async Task<T> Add(T entity)
         {
-            throw new NotImplementedException();
+            await _dbContext.AddAsync(entity);
+            await _dbContext.SaveChangesAsync();
+            return entity;
         }
 
-        public Task Delete(T entity)
+        public async Task Delete(T entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Set<T>().Remove(entity);
+            await _dbContext.SaveChangesAsync();
         }
 
-        public Task<T> Get(int id)
+        public async Task<T> Get(int id)
         {
-            throw new NotImplementedException();
+            return await _dbContext.Set<T>().FindAsync(id);
         }
 
-        public  IEnumerable<T> GetAll()
+        public async Task<IEnumerable<T>> GetAll()
         {
-            return _dbContext.Set<T>().ToList();
+            return await _dbContext.Set<T>().ToListAsync();
         }
 
-        public Task Update(T entity)
+        public async Task Update(T entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Entry(entity).State = EntityState.Modified;
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

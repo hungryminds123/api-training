@@ -22,5 +22,18 @@ namespace Core.Mapper
                 Id = employee.Id,
             };
         }
+
+
+        public static Employee ConvertToEmployee(this EmployeeViewModel employee)
+        {
+            return new Employee()
+            {
+                FirstName = employee.FirstName,
+                LastName = employee.LastName,
+                Gender = employee.Gender,
+                CreatedBy ="Admin",
+                CreatedOn = DateTime.Now
+            };
+        }
     }
 }

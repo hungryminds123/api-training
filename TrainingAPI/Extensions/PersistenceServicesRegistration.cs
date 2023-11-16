@@ -16,6 +16,7 @@ namespace TrainingAPI.Extensions
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
             return services;
+
         }
 
         public static IServiceCollection ConfigureCoreServices(

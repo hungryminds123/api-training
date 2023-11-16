@@ -5,6 +5,10 @@ namespace Core.Interfaces
     public interface IEmployeeService
     {
 
-        IEnumerable<EmployeeViewModel> GetAllEmployees();
+        Task<IEnumerable<EmployeeViewModel>> GetAllEmployees();
+
+        Task<EmployeeViewModel> GetEmployeeById(int id);
+
+        Task<bool> InsertEmployee(EmployeeViewModel employee);
     }
 }
