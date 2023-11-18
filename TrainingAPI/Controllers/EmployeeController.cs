@@ -51,6 +51,8 @@ namespace TrainingAPI.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(bool), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Post([FromBody] EmployeeViewModel empModel)
         {
             var response = await _employeeService.InsertEmployee(empModel);

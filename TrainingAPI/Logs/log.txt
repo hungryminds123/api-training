@@ -67,3 +67,681 @@ System.Security.Authentication.AuthenticationException: Authentication failed, s
 2023-11-18 16:04:32.581 +05:30 [INF] Application is shutting down...
 2023-11-18 16:04:32.584 +05:30 [DBG] Hosting stopping
 2023-11-18 16:04:32.609 +05:30 [DBG] Hosting stopped
+2023-11-18 16:24:35.263 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-11-18 16:24:35.783 +05:30 [DBG] Hosting starting
+2023-11-18 16:24:36.353 +05:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 5064DAA05F471EB6693E9A8289662C95D9A2D4AF)
+2023-11-18 16:24:37.511 +05:30 [INF] Now listening on: https://localhost:7182
+2023-11-18 16:24:37.515 +05:30 [INF] Now listening on: http://localhost:5091
+2023-11-18 16:24:37.517 +05:30 [DBG] Loaded hosting startup assembly TrainingAPI
+2023-11-18 16:24:37.520 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-18 16:24:37.523 +05:30 [INF] Hosting environment: Development
+2023-11-18 16:24:37.524 +05:30 [INF] Content root path: /home/rahul/SourceCode/TrainingSessions/api-training/TrainingAPI/
+2023-11-18 16:24:37.524 +05:30 [DBG] Hosting started
+2023-11-18 16:24:37.974 +05:30 [DBG] Connection id "0HMV84J151H61" accepted.
+2023-11-18 16:24:37.976 +05:30 [DBG] Connection id "0HMV84J151H61" started.
+2023-11-18 16:24:38.115 +05:30 [DBG] Connection id "0HMV84J151H62" accepted.
+2023-11-18 16:24:38.123 +05:30 [DBG] Connection id "0HMV84J151H62" started.
+2023-11-18 16:24:38.123 +05:30 [DBG] Connection id "0HMV84J151H61" received FIN.
+2023-11-18 16:24:38.241 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:0A000416:SSL routines::sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-11-18 16:24:38.301 +05:30 [DBG] Connection 0HMV84J151H62 established using the following protocol: "Tls13"
+2023-11-18 16:24:38.454 +05:30 [DBG] Connection id "0HMV84J151H61" stopped.
+2023-11-18 16:24:38.457 +05:30 [DBG] Connection id "0HMV84J151H61" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-18 16:24:38.787 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger - -
+2023-11-18 16:24:38.791 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-11-18 16:24:38.933 +05:30 [DBG] No candidates found for the request path '/swagger'
+2023-11-18 16:24:38.936 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:24:39.133 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - -
+2023-11-18 16:24:39.136 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-11-18 16:24:39.137 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:24:39.134 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger - - - 301 0 - 356.5185ms
+2023-11-18 16:24:40.158 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - - - 200 - text/html;charset=utf-8 1025.2391ms
+2023-11-18 16:24:40.247 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - -
+2023-11-18 16:24:40.251 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2023-11-18 16:24:40.254 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:24:40.248 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - -
+2023-11-18 16:24:40.255 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-11-18 16:24:40.256 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:24:40.248 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - -
+2023-11-18 16:24:40.257 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2023-11-18 16:24:40.258 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:24:40.467 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-11-18 16:24:40.467 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-11-18 16:24:40.471 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-11-18 16:24:40.490 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 243.6909ms
+2023-11-18 16:24:40.491 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - - - 200 144929 text/css 242.9155ms
+2023-11-18 16:24:40.503 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 254.6479ms
+2023-11-18 16:24:41.427 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - -
+2023-11-18 16:24:41.428 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-11-18 16:24:41.428 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:24:41.482 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - -
+2023-11-18 16:24:41.482 +05:30 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-11-18 16:24:41.488 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:24:41.492 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-11-18 16:24:41.503 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - - - 200 628 image/png 21.4167ms
+2023-11-18 16:24:42.166 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 738.6604ms
+2023-11-18 16:24:59.062 +05:30 [DBG] Hosting stopping
+2023-11-18 16:24:59.067 +05:30 [INF] Application is shutting down...
+2023-11-18 16:24:59.143 +05:30 [DBG] Connection id "0HMV84J151H62" is closing.
+2023-11-18 16:24:59.167 +05:30 [DBG] Connection id "0HMV84J151H62" is closed. The last processed stream ID was 13.
+2023-11-18 16:24:59.170 +05:30 [DBG] Connection id "0HMV84J151H62" received FIN.
+2023-11-18 16:24:59.171 +05:30 [DBG] Connection id "0HMV84J151H62" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-18 16:24:59.180 +05:30 [DBG] Connection id "0HMV84J151H62" stopped.
+2023-11-18 16:24:59.199 +05:30 [DBG] Hosting stopped
+2023-11-18 16:33:44.353 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-11-18 16:33:44.812 +05:30 [DBG] Hosting starting
+2023-11-18 16:33:45.858 +05:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 5064DAA05F471EB6693E9A8289662C95D9A2D4AF)
+2023-11-18 16:33:47.118 +05:30 [INF] Now listening on: https://localhost:7182
+2023-11-18 16:33:47.129 +05:30 [INF] Now listening on: http://localhost:5091
+2023-11-18 16:33:47.160 +05:30 [DBG] Loaded hosting startup assembly TrainingAPI
+2023-11-18 16:33:47.163 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-18 16:33:47.173 +05:30 [INF] Hosting environment: Development
+2023-11-18 16:33:47.174 +05:30 [INF] Content root path: /home/rahul/SourceCode/TrainingSessions/api-training/TrainingAPI/
+2023-11-18 16:33:47.175 +05:30 [DBG] Hosting started
+2023-11-18 16:33:47.752 +05:30 [DBG] Connection id "0HMV84O500N58" accepted.
+2023-11-18 16:33:47.757 +05:30 [DBG] Connection id "0HMV84O500N58" started.
+2023-11-18 16:33:47.894 +05:30 [DBG] Connection id "0HMV84O500N59" accepted.
+2023-11-18 16:33:47.895 +05:30 [DBG] Connection id "0HMV84O500N59" started.
+2023-11-18 16:33:47.895 +05:30 [DBG] Connection id "0HMV84O500N58" received FIN.
+2023-11-18 16:33:47.964 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:0A000416:SSL routines::sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-11-18 16:33:48.061 +05:30 [DBG] Connection 0HMV84O500N59 established using the following protocol: "Tls13"
+2023-11-18 16:33:48.081 +05:30 [DBG] Connection id "0HMV84O500N58" stopped.
+2023-11-18 16:33:48.083 +05:30 [DBG] Connection id "0HMV84O500N58" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-18 16:33:48.316 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger - -
+2023-11-18 16:33:48.322 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-11-18 16:33:48.409 +05:30 [DBG] No candidates found for the request path '/swagger'
+2023-11-18 16:33:48.410 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:33:48.574 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger - - - 301 0 - 264.0353ms
+2023-11-18 16:33:48.578 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - -
+2023-11-18 16:33:48.579 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-11-18 16:33:48.579 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:33:49.223 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - - - 200 - text/html;charset=utf-8 644.4855ms
+2023-11-18 16:33:49.283 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - -
+2023-11-18 16:33:49.284 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2023-11-18 16:33:49.285 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:33:49.286 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - -
+2023-11-18 16:33:49.287 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-11-18 16:33:49.287 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:33:49.288 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - -
+2023-11-18 16:33:49.289 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2023-11-18 16:33:49.289 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:33:49.347 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-11-18 16:33:49.354 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - - - 200 144929 text/css 67.7393ms
+2023-11-18 16:33:49.639 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-11-18 16:33:49.643 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-11-18 16:33:49.673 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 389.3563ms
+2023-11-18 16:33:49.673 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 384.5319ms
+2023-11-18 16:33:50.111 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - -
+2023-11-18 16:33:50.111 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-11-18 16:33:50.113 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:33:50.160 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - -
+2023-11-18 16:33:50.160 +05:30 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-11-18 16:33:50.161 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:33:50.162 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-11-18 16:33:50.168 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - - - 200 628 image/png 8.6382ms
+2023-11-18 16:33:50.563 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 452.4334ms
+2023-11-18 16:33:53.869 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Employee - -
+2023-11-18 16:33:53.888 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Employee'
+2023-11-18 16:33:53.917 +05:30 [DBG] Endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)' with route pattern 'api/Employee' is valid for the request path '/api/Employee'
+2023-11-18 16:33:53.920 +05:30 [DBG] Request matched endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)'
+2023-11-18 16:33:53.925 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2023-11-18 16:33:58.989 +05:30 [INF] Executing endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)'
+2023-11-18 16:33:59.053 +05:30 [INF] Route matched with {action = "Get", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[Core.ViewModels.EmployeeViewModel]] Get() on controller TrainingAPI.Controllers.EmployeeController (TrainingAPI).
+2023-11-18 16:33:59.056 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-11-18 16:33:59.056 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-11-18 16:33:59.057 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-11-18 16:33:59.058 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-11-18 16:33:59.058 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-11-18 16:33:59.060 +05:30 [DBG] Executing controller factory for controller TrainingAPI.Controllers.EmployeeController (TrainingAPI)
+2023-11-18 16:33:59.657 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-11-18 16:34:00.124 +05:30 [DBG] Executed controller factory for controller TrainingAPI.Controllers.EmployeeController (TrainingAPI)
+2023-11-18 16:34:00.130 +05:30 [INF] Reading data from Get Request
+2023-11-18 16:34:02.618 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: None
+2023-11-18 16:34:03.013 +05:30 [DBG] Compiling query expression: 
+'DbSet<Employee>()'
+2023-11-18 16:34:03.868 +05:30 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Employee>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Employee.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Employee.CreatedBy (string) Required, 1], [Property: Employee.CreatedOn (DateTime) Required, 2], [Property: Employee.FirstName (string) MaxLength(100), 3], [Property: Employee.Gender (string) MaxLength(2), 4], [Property: Employee.LastName (string) MaxLength(100), 5], [Property: Employee.UpdatedBy (string), 6], [Property: Employee.UpdatedOn (DateTime) Required, 7] }
+        SELECT e.Id, e.CreatedBy, e.CreatedOn, e.FirstName, e.Gender, e.LastName, e.UpdatedBy, e.UpdatedOn
+        FROM Employees AS e), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Employee>, 
+    Domain.EFLearningContext, 
+    False, 
+    False, 
+    True
+)'
+2023-11-18 16:34:04.037 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-11-18 16:34:04.047 +05:30 [DBG] Creating DbConnection.
+2023-11-18 16:34:04.165 +05:30 [DBG] Created DbConnection. (104ms).
+2023-11-18 16:34:04.216 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (165ms).
+2023-11-18 16:34:04.232 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (202ms).
+2023-11-18 16:34:04.259 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:34:05.495 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:34:05.550 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedBy], [e].[CreatedOn], [e].[FirstName], [e].[Gender], [e].[LastName], [e].[UpdatedBy], [e].[UpdatedOn]
+FROM [Employees] AS [e]
+2023-11-18 16:34:05.779 +05:30 [INF] Executed DbCommand (239ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedBy], [e].[CreatedOn], [e].[FirstName], [e].[Gender], [e].[LastName], [e].[UpdatedBy], [e].[UpdatedOn]
+FROM [Employees] AS [e]
+2023-11-18 16:34:06.017 +05:30 [DBG] Context 'EFLearningContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-11-18 16:34:06.104 +05:30 [DBG] Context 'EFLearningContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-11-18 16:34:06.106 +05:30 [DBG] Context 'EFLearningContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-11-18 16:34:06.127 +05:30 [DBG] Closing data reader to 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:34:06.161 +05:30 [DBG] A data reader for 'EFLearning' on server 'localhost,1433' is being disposed after spending 350ms reading results.
+2023-11-18 16:34:06.180 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:34:06.217 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (35ms).
+2023-11-18 16:34:06.251 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-11-18 16:34:06.265 +05:30 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2023-11-18 16:34:06.267 +05:30 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2023-11-18 16:34:06.268 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-11-18 16:34:06.269 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-11-18 16:34:06.272 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-11-18 16:34:06.274 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Core.ViewModels.EmployeeViewModel, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-18 16:34:06.362 +05:30 [INF] Executed action TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI) in 7278.1116ms
+2023-11-18 16:34:06.368 +05:30 [INF] Executed endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)'
+2023-11-18 16:34:06.400 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-18 16:34:06.436 +05:30 [DBG] Disposing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:34:06.450 +05:30 [DBG] Disposed connection to database '' on server '' (13ms).
+2023-11-18 16:34:06.455 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Employee - - - 200 - application/json;+charset=utf-8 12586.4380ms
+2023-11-18 16:34:38.492 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Employee/getById/1 - -
+2023-11-18 16:34:38.542 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Employee/getById/1'
+2023-11-18 16:34:38.544 +05:30 [DBG] Endpoint 'TrainingAPI.Controllers.EmployeeController.GetById (TrainingAPI)' with route pattern 'api/Employee/getById/{id}' is valid for the request path '/api/Employee/getById/1'
+2023-11-18 16:34:38.545 +05:30 [DBG] Request matched endpoint 'TrainingAPI.Controllers.EmployeeController.GetById (TrainingAPI)'
+2023-11-18 16:34:38.546 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2023-11-18 16:34:45.553 +05:30 [INF] Executing endpoint 'TrainingAPI.Controllers.EmployeeController.GetById (TrainingAPI)'
+2023-11-18 16:34:45.604 +05:30 [INF] Route matched with {action = "GetById", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Core.ViewModels.EmployeeViewModel] GetById(Int32) on controller TrainingAPI.Controllers.EmployeeController (TrainingAPI).
+2023-11-18 16:34:45.605 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-11-18 16:34:45.605 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-11-18 16:34:45.606 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-11-18 16:34:45.607 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-11-18 16:34:45.607 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-11-18 16:34:45.608 +05:30 [DBG] Executing controller factory for controller TrainingAPI.Controllers.EmployeeController (TrainingAPI)
+2023-11-18 16:34:45.610 +05:30 [DBG] Executed controller factory for controller TrainingAPI.Controllers.EmployeeController (TrainingAPI)
+2023-11-18 16:34:45.635 +05:30 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2023-11-18 16:34:45.644 +05:30 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2023-11-18 16:34:45.647 +05:30 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2023-11-18 16:34:45.648 +05:30 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2023-11-18 16:34:45.648 +05:30 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2023-11-18 16:34:45.653 +05:30 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2023-11-18 16:34:49.359 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: None
+2023-11-18 16:34:49.483 +05:30 [DBG] Compiling query expression: 
+'DbSet<Employee>()
+    .FirstOrDefault(e => EF.Property<int>(e, "Id") == __p_0)'
+2023-11-18 16:34:49.866 +05:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<Employee>(
+    asyncEnumerable: new SingleQueryingEnumerable<Employee>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Employee.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Employee.CreatedBy (string) Required, 1], [Property: Employee.CreatedOn (DateTime) Required, 2], [Property: Employee.FirstName (string) MaxLength(100), 3], [Property: Employee.Gender (string) MaxLength(2), 4], [Property: Employee.LastName (string) MaxLength(100), 5], [Property: Employee.UpdatedBy (string), 6], [Property: Employee.UpdatedOn (DateTime) Required, 7] }
+            SELECT TOP(1) e.Id, e.CreatedBy, e.CreatedOn, e.FirstName, e.Gender, e.LastName, e.UpdatedBy, e.UpdatedOn
+            FROM Employees AS e
+            WHERE e.Id == @__p_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Employee>, 
+        Domain.EFLearningContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2023-11-18 16:34:49.920 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-11-18 16:34:49.920 +05:30 [DBG] Creating DbConnection.
+2023-11-18 16:34:49.922 +05:30 [DBG] Created DbConnection. (1ms).
+2023-11-18 16:34:49.923 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2023-11-18 16:34:49.954 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (34ms).
+2023-11-18 16:34:49.955 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:34:49.962 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:34:49.994 +05:30 [DBG] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[CreatedBy], [e].[CreatedOn], [e].[FirstName], [e].[Gender], [e].[LastName], [e].[UpdatedBy], [e].[UpdatedOn]
+FROM [Employees] AS [e]
+WHERE [e].[Id] = @__p_0
+2023-11-18 16:34:50.188 +05:30 [INF] Executed DbCommand (226ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[CreatedBy], [e].[CreatedOn], [e].[FirstName], [e].[Gender], [e].[LastName], [e].[UpdatedBy], [e].[UpdatedOn]
+FROM [Employees] AS [e]
+WHERE [e].[Id] = @__p_0
+2023-11-18 16:34:50.199 +05:30 [DBG] Context 'EFLearningContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-11-18 16:34:51.369 +05:30 [DBG] Closing data reader to 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:34:51.392 +05:30 [DBG] A data reader for 'EFLearning' on server 'localhost,1433' is being disposed after spending 1193ms reading results.
+2023-11-18 16:34:51.399 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:34:51.404 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (4ms).
+2023-11-18 16:35:06.610 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-11-18 16:35:06.610 +05:30 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2023-11-18 16:35:06.611 +05:30 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2023-11-18 16:35:06.611 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-11-18 16:35:06.612 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-11-18 16:35:06.612 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-11-18 16:35:06.612 +05:30 [INF] Executing ObjectResult, writing value of type 'Core.ViewModels.EmployeeViewModel'.
+2023-11-18 16:35:06.626 +05:30 [INF] Executed action TrainingAPI.Controllers.EmployeeController.GetById (TrainingAPI) in 21017.9943ms
+2023-11-18 16:35:06.657 +05:30 [INF] Executed endpoint 'TrainingAPI.Controllers.EmployeeController.GetById (TrainingAPI)'
+2023-11-18 16:35:06.658 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-18 16:35:06.666 +05:30 [DBG] Disposing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:35:06.686 +05:30 [DBG] Disposed connection to database '' on server '' (13ms).
+2023-11-18 16:35:06.706 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Employee/getById/1 - - - 200 - application/json;+charset=utf-8 28214.0456ms
+2023-11-18 16:37:29.603 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-11-18 16:37:30.095 +05:30 [DBG] Hosting starting
+2023-11-18 16:37:30.799 +05:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 5064DAA05F471EB6693E9A8289662C95D9A2D4AF)
+2023-11-18 16:37:31.820 +05:30 [INF] Now listening on: https://localhost:7182
+2023-11-18 16:37:31.821 +05:30 [INF] Now listening on: http://localhost:5091
+2023-11-18 16:37:31.822 +05:30 [DBG] Loaded hosting startup assembly TrainingAPI
+2023-11-18 16:37:31.826 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-18 16:37:31.830 +05:30 [INF] Hosting environment: Development
+2023-11-18 16:37:31.830 +05:30 [INF] Content root path: /home/rahul/SourceCode/TrainingSessions/api-training/TrainingAPI/
+2023-11-18 16:37:31.831 +05:30 [DBG] Hosting started
+2023-11-18 16:37:35.342 +05:30 [DBG] Connection id "0HMV84Q8QK2BS" accepted.
+2023-11-18 16:37:35.344 +05:30 [DBG] Connection id "0HMV84Q8QK2BS" started.
+2023-11-18 16:37:35.500 +05:30 [DBG] Connection id "0HMV84Q8QK2BT" accepted.
+2023-11-18 16:37:35.501 +05:30 [DBG] Connection id "0HMV84Q8QK2BS" received FIN.
+2023-11-18 16:37:35.503 +05:30 [DBG] Connection id "0HMV84Q8QK2BT" started.
+2023-11-18 16:37:35.594 +05:30 [DBG] Connection 0HMV84Q8QK2BT established using the following protocol: "Tls13"
+2023-11-18 16:37:35.592 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:0A000416:SSL routines::sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-11-18 16:37:35.687 +05:30 [DBG] Connection id "0HMV84Q8QK2BS" stopped.
+2023-11-18 16:37:35.690 +05:30 [DBG] Connection id "0HMV84Q8QK2BS" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-18 16:37:35.876 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger - -
+2023-11-18 16:37:35.883 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-11-18 16:37:36.016 +05:30 [DBG] No candidates found for the request path '/swagger'
+2023-11-18 16:37:36.017 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:37:36.236 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger - - - 301 0 - 370.5214ms
+2023-11-18 16:37:36.252 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - -
+2023-11-18 16:37:36.253 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-11-18 16:37:36.253 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:37:37.243 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - - - 200 - text/html;charset=utf-8 990.7678ms
+2023-11-18 16:37:37.282 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - -
+2023-11-18 16:37:37.286 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-11-18 16:37:37.289 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:37:37.287 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - -
+2023-11-18 16:37:37.292 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2023-11-18 16:37:37.297 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - -
+2023-11-18 16:37:37.298 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:37:37.298 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2023-11-18 16:37:37.302 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:37:37.541 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-11-18 16:37:37.542 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-11-18 16:37:37.541 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-11-18 16:37:37.569 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 271.9168ms
+2023-11-18 16:37:37.570 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - - - 200 144929 text/css 287.8749ms
+2023-11-18 16:37:37.574 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 286.9637ms
+2023-11-18 16:37:38.671 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - -
+2023-11-18 16:37:38.671 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-11-18 16:37:38.672 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:37:38.736 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - -
+2023-11-18 16:37:38.738 +05:30 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-11-18 16:37:38.739 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:37:38.740 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-11-18 16:37:38.741 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - - - 200 628 image/png 5.1594ms
+2023-11-18 16:37:39.332 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 660.7697ms
+2023-11-18 16:37:47.069 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Employee - -
+2023-11-18 16:37:47.137 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Employee'
+2023-11-18 16:37:47.178 +05:30 [DBG] Endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)' with route pattern 'api/Employee' is valid for the request path '/api/Employee'
+2023-11-18 16:37:47.190 +05:30 [DBG] Request matched endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)'
+2023-11-18 16:37:47.193 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2023-11-18 16:37:47.212 +05:30 [INF] Executing endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)'
+2023-11-18 16:37:47.364 +05:30 [INF] Route matched with {action = "Get", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[Core.ViewModels.EmployeeViewModel]] Get() on controller TrainingAPI.Controllers.EmployeeController (TrainingAPI).
+2023-11-18 16:37:47.367 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-11-18 16:37:47.368 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-11-18 16:37:47.370 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-11-18 16:37:47.370 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-11-18 16:37:47.371 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-11-18 16:37:47.373 +05:30 [DBG] Executing controller factory for controller TrainingAPI.Controllers.EmployeeController (TrainingAPI)
+2023-11-18 16:37:48.210 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-11-18 16:37:49.145 +05:30 [DBG] Executed controller factory for controller TrainingAPI.Controllers.EmployeeController (TrainingAPI)
+2023-11-18 16:37:49.154 +05:30 [INF] Reading data from Get Request
+2023-11-18 16:37:53.408 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: None
+2023-11-18 16:37:53.737 +05:30 [DBG] Compiling query expression: 
+'DbSet<Employee>()'
+2023-11-18 16:37:54.873 +05:30 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Employee>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Employee.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Employee.CreatedBy (string) Required, 1], [Property: Employee.CreatedOn (DateTime) Required, 2], [Property: Employee.FirstName (string) MaxLength(100), 3], [Property: Employee.Gender (string) MaxLength(2), 4], [Property: Employee.LastName (string) MaxLength(100), 5], [Property: Employee.UpdatedBy (string), 6], [Property: Employee.UpdatedOn (DateTime) Required, 7] }
+        SELECT e.Id, e.CreatedBy, e.CreatedOn, e.FirstName, e.Gender, e.LastName, e.UpdatedBy, e.UpdatedOn
+        FROM Employees AS e), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Employee>, 
+    Domain.EFLearningContext, 
+    False, 
+    False, 
+    True
+)'
+2023-11-18 16:37:55.068 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-11-18 16:37:55.076 +05:30 [DBG] Creating DbConnection.
+2023-11-18 16:37:55.248 +05:30 [DBG] Created DbConnection. (145ms).
+2023-11-18 16:37:55.302 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (214ms).
+2023-11-18 16:37:55.312 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (250ms).
+2023-11-18 16:37:55.349 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:37:56.513 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:37:56.613 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedBy], [e].[CreatedOn], [e].[FirstName], [e].[Gender], [e].[LastName], [e].[UpdatedBy], [e].[UpdatedOn]
+FROM [Employees] AS [e]
+2023-11-18 16:37:56.924 +05:30 [INF] Executed DbCommand (338ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedBy], [e].[CreatedOn], [e].[FirstName], [e].[Gender], [e].[LastName], [e].[UpdatedBy], [e].[UpdatedOn]
+FROM [Employees] AS [e]
+2023-11-18 16:37:57.254 +05:30 [DBG] Context 'EFLearningContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-11-18 16:37:57.387 +05:30 [DBG] Context 'EFLearningContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-11-18 16:37:57.388 +05:30 [DBG] Context 'EFLearningContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-11-18 16:37:57.413 +05:30 [DBG] Closing data reader to 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:37:57.489 +05:30 [DBG] A data reader for 'EFLearning' on server 'localhost,1433' is being disposed after spending 492ms reading results.
+2023-11-18 16:37:57.524 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:37:57.581 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (54ms).
+2023-11-18 16:37:57.724 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-11-18 16:37:57.761 +05:30 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2023-11-18 16:37:57.763 +05:30 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2023-11-18 16:37:57.764 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-11-18 16:37:57.765 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-11-18 16:37:57.774 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-11-18 16:37:57.776 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Core.ViewModels.EmployeeViewModel, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-18 16:37:57.894 +05:30 [INF] Executed action TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI) in 10492.6193ms
+2023-11-18 16:37:57.901 +05:30 [INF] Executed endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)'
+2023-11-18 16:37:57.926 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-18 16:37:57.981 +05:30 [DBG] Disposing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:37:58.001 +05:30 [DBG] Disposed connection to database '' on server '' (22ms).
+2023-11-18 16:37:58.013 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Employee - - - 200 - application/json;+charset=utf-8 10943.6682ms
+2023-11-18 16:38:12.964 +05:30 [INF] Application is shutting down...
+2023-11-18 16:38:12.970 +05:30 [DBG] Hosting stopping
+2023-11-18 16:38:13.042 +05:30 [DBG] Connection id "0HMV84Q8QK2BT" is closing.
+2023-11-18 16:38:13.046 +05:30 [DBG] Connection id "0HMV84Q8QK2BT" is closed. The last processed stream ID was 15.
+2023-11-18 16:38:13.056 +05:30 [DBG] Connection id "0HMV84Q8QK2BT" received FIN.
+2023-11-18 16:38:13.073 +05:30 [DBG] Connection id "0HMV84Q8QK2BT" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-18 16:38:13.085 +05:30 [DBG] Connection id "0HMV84Q8QK2BT" stopped.
+2023-11-18 16:38:13.112 +05:30 [DBG] Hosting stopped
+2023-11-18 16:40:09.266 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-11-18 16:40:09.673 +05:30 [DBG] Hosting starting
+2023-11-18 16:40:10.391 +05:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 5064DAA05F471EB6693E9A8289662C95D9A2D4AF)
+2023-11-18 16:40:11.433 +05:30 [INF] Now listening on: https://localhost:7182
+2023-11-18 16:40:11.434 +05:30 [INF] Now listening on: http://localhost:5091
+2023-11-18 16:40:11.435 +05:30 [DBG] Loaded hosting startup assembly TrainingAPI
+2023-11-18 16:40:11.439 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-18 16:40:11.445 +05:30 [INF] Hosting environment: Development
+2023-11-18 16:40:11.460 +05:30 [INF] Content root path: /home/rahul/SourceCode/TrainingSessions/api-training/TrainingAPI/
+2023-11-18 16:40:11.460 +05:30 [DBG] Hosting started
+2023-11-18 16:40:14.098 +05:30 [DBG] Connection id "0HMV84RO4GQ03" accepted.
+2023-11-18 16:40:14.102 +05:30 [DBG] Connection id "0HMV84RO4GQ03" started.
+2023-11-18 16:40:14.253 +05:30 [DBG] Connection id "0HMV84RO4GQ04" accepted.
+2023-11-18 16:40:14.253 +05:30 [DBG] Connection id "0HMV84RO4GQ04" started.
+2023-11-18 16:40:14.271 +05:30 [DBG] Connection id "0HMV84RO4GQ03" received FIN.
+2023-11-18 16:40:14.334 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:0A000416:SSL routines::sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-11-18 16:40:14.349 +05:30 [DBG] Connection 0HMV84RO4GQ04 established using the following protocol: "Tls13"
+2023-11-18 16:40:14.423 +05:30 [DBG] Connection id "0HMV84RO4GQ03" stopped.
+2023-11-18 16:40:14.425 +05:30 [DBG] Connection id "0HMV84RO4GQ03" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-18 16:40:14.716 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger - -
+2023-11-18 16:40:14.720 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-11-18 16:40:14.829 +05:30 [DBG] No candidates found for the request path '/swagger'
+2023-11-18 16:40:14.832 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:40:15.040 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - -
+2023-11-18 16:40:15.040 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-11-18 16:40:15.041 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:40:15.134 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger - - - 301 0 - 423.8024ms
+2023-11-18 16:40:16.344 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - - - 200 - text/html;charset=utf-8 1303.7157ms
+2023-11-18 16:40:16.438 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - -
+2023-11-18 16:40:16.440 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-11-18 16:40:16.440 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:40:16.441 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - -
+2023-11-18 16:40:16.448 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2023-11-18 16:40:16.451 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:40:16.439 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - -
+2023-11-18 16:40:16.455 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2023-11-18 16:40:16.455 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:40:16.556 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-11-18 16:40:16.594 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - - - 200 144929 text/css 155.7602ms
+2023-11-18 16:40:16.614 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-11-18 16:40:16.624 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 184.8027ms
+2023-11-18 16:40:16.666 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-11-18 16:40:16.685 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 245.3197ms
+2023-11-18 16:40:17.381 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - -
+2023-11-18 16:40:17.382 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-11-18 16:40:17.383 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:40:17.421 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - -
+2023-11-18 16:40:17.421 +05:30 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-11-18 16:40:17.421 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:40:17.422 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-11-18 16:40:17.423 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - - - 200 628 image/png 2.3839ms
+2023-11-18 16:40:17.749 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 367.8223ms
+2023-11-18 16:41:42.132 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - -
+2023-11-18 16:41:42.132 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-11-18 16:41:42.133 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:41:42.169 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - - - 200 - text/html;charset=utf-8 37.3168ms
+2023-11-18 16:41:42.224 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - -
+2023-11-18 16:41:42.225 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-11-18 16:41:42.227 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:41:42.245 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-11-18 16:41:42.246 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - - - 200 144929 text/css 21.3404ms
+2023-11-18 16:41:42.724 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - -
+2023-11-18 16:41:42.724 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-11-18 16:41:42.725 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:41:42.738 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - -
+2023-11-18 16:41:42.752 +05:30 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-11-18 16:41:42.759 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:41:42.763 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-11-18 16:41:42.775 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - - - 200 628 image/png 36.6209ms
+2023-11-18 16:41:42.789 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 65.5161ms
+2023-11-18 16:42:34.350 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - -
+2023-11-18 16:42:34.351 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-11-18 16:42:34.352 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:42:34.399 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - - - 200 - text/html;charset=utf-8 48.7309ms
+2023-11-18 16:42:34.451 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - -
+2023-11-18 16:42:34.456 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-11-18 16:42:34.460 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:42:34.469 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-11-18 16:42:34.471 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - - - 200 144929 text/css 20.4237ms
+2023-11-18 16:42:34.887 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - -
+2023-11-18 16:42:34.887 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - -
+2023-11-18 16:42:34.890 +05:30 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-11-18 16:42:34.891 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:42:34.890 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-11-18 16:42:34.892 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:42:34.892 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-11-18 16:42:34.895 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - - - 200 628 image/png 8.0960ms
+2023-11-18 16:42:34.936 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 49.3241ms
+2023-11-18 16:44:04.536 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - -
+2023-11-18 16:44:04.537 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-11-18 16:44:04.538 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:44:04.594 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - - - 200 - text/html;charset=utf-8 58.7252ms
+2023-11-18 16:44:04.642 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - -
+2023-11-18 16:44:04.643 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-11-18 16:44:04.644 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:44:04.647 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-11-18 16:44:04.649 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - - - 200 144929 text/css 6.3986ms
+2023-11-18 16:44:05.170 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - -
+2023-11-18 16:44:05.177 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-11-18 16:44:05.187 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:44:05.215 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - -
+2023-11-18 16:44:05.218 +05:30 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-11-18 16:44:05.220 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:44:05.238 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 70.9294ms
+2023-11-18 16:44:05.246 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-11-18 16:44:05.247 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - - - 200 628 image/png 32.0687ms
+2023-11-18 16:45:19.754 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - -
+2023-11-18 16:45:19.757 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-11-18 16:45:19.760 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:45:19.775 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 20.5051ms
+2023-11-18 16:45:19.916 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/favicon.ico - -
+2023-11-18 16:45:19.916 +05:30 [DBG] No candidates found for the request path '/favicon.ico'
+2023-11-18 16:45:19.920 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:45:19.924 +05:30 [DBG] The request path  does not match the path filter
+2023-11-18 16:45:19.934 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/favicon.ico - - - 404 0 - 17.9431ms
+2023-11-18 16:47:31.091 +05:30 [DBG] Connection id "0HMV84RO4GQ04" is closing.
+2023-11-18 16:47:31.115 +05:30 [DBG] Connection id "0HMV84RO4GQ04" is closed. The last processed stream ID was 41.
+2023-11-18 16:47:31.119 +05:30 [DBG] Connection id "0HMV84RO4GQ04" received FIN.
+2023-11-18 16:47:31.121 +05:30 [DBG] Connection id "0HMV84RO4GQ04" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-18 16:47:31.128 +05:30 [DBG] Connection id "0HMV84RO4GQ04" stopped.
+2023-11-18 16:47:50.817 +05:30 [DBG] Connection id "0HMV84RO4GQ05" accepted.
+2023-11-18 16:47:50.818 +05:30 [DBG] Connection id "0HMV84RO4GQ05" started.
+2023-11-18 16:47:50.840 +05:30 [DBG] Connection id "0HMV84RO4GQ05" received FIN.
+2023-11-18 16:47:50.841 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:0A000416:SSL routines::sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-11-18 16:47:50.841 +05:30 [DBG] Connection id "0HMV84RO4GQ06" accepted.
+2023-11-18 16:47:50.882 +05:30 [DBG] Connection id "0HMV84RO4GQ06" started.
+2023-11-18 16:47:50.882 +05:30 [DBG] Connection id "0HMV84RO4GQ05" stopped.
+2023-11-18 16:47:50.894 +05:30 [DBG] Connection id "0HMV84RO4GQ05" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-18 16:47:50.894 +05:30 [DBG] Connection 0HMV84RO4GQ06 established using the following protocol: "Tls13"
+2023-11-18 16:47:50.904 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Employee - -
+2023-11-18 16:47:50.939 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Employee'
+2023-11-18 16:47:50.975 +05:30 [DBG] Endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)' with route pattern 'api/Employee' is valid for the request path '/api/Employee'
+2023-11-18 16:47:50.977 +05:30 [DBG] Request matched endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)'
+2023-11-18 16:47:50.979 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2023-11-18 16:47:50.985 +05:30 [INF] Executing endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)'
+2023-11-18 16:47:51.188 +05:30 [INF] Route matched with {action = "Get", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[Core.ViewModels.EmployeeViewModel]] Get() on controller TrainingAPI.Controllers.EmployeeController (TrainingAPI).
+2023-11-18 16:47:51.203 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-11-18 16:47:51.207 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-11-18 16:47:51.209 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-11-18 16:47:51.211 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-11-18 16:47:51.212 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-11-18 16:47:51.217 +05:30 [DBG] Executing controller factory for controller TrainingAPI.Controllers.EmployeeController (TrainingAPI)
+2023-11-18 16:47:52.102 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-11-18 16:47:52.969 +05:30 [DBG] Executed controller factory for controller TrainingAPI.Controllers.EmployeeController (TrainingAPI)
+2023-11-18 16:47:52.980 +05:30 [INF] Reading data from Get Request
+2023-11-18 16:47:58.364 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: None
+2023-11-18 16:47:58.766 +05:30 [DBG] Compiling query expression: 
+'DbSet<Employee>()'
+2023-11-18 16:47:59.866 +05:30 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Employee>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Employee.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Employee.CreatedBy (string) Required, 1], [Property: Employee.CreatedOn (DateTime) Required, 2], [Property: Employee.FirstName (string) MaxLength(100), 3], [Property: Employee.Gender (string) MaxLength(2), 4], [Property: Employee.LastName (string) MaxLength(100), 5], [Property: Employee.UpdatedBy (string), 6], [Property: Employee.UpdatedOn (DateTime) Required, 7] }
+        SELECT e.Id, e.CreatedBy, e.CreatedOn, e.FirstName, e.Gender, e.LastName, e.UpdatedBy, e.UpdatedOn
+        FROM Employees AS e), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Employee>, 
+    Domain.EFLearningContext, 
+    False, 
+    False, 
+    True
+)'
+2023-11-18 16:48:00.149 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-11-18 16:48:00.160 +05:30 [DBG] Creating DbConnection.
+2023-11-18 16:48:00.366 +05:30 [DBG] Created DbConnection. (184ms).
+2023-11-18 16:48:00.395 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (248ms).
+2023-11-18 16:48:00.410 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (266ms).
+2023-11-18 16:48:00.455 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:48:02.749 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:48:02.858 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedBy], [e].[CreatedOn], [e].[FirstName], [e].[Gender], [e].[LastName], [e].[UpdatedBy], [e].[UpdatedOn]
+FROM [Employees] AS [e]
+2023-11-18 16:48:03.243 +05:30 [INF] Executed DbCommand (376ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedBy], [e].[CreatedOn], [e].[FirstName], [e].[Gender], [e].[LastName], [e].[UpdatedBy], [e].[UpdatedOn]
+FROM [Employees] AS [e]
+2023-11-18 16:48:03.560 +05:30 [DBG] Context 'EFLearningContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-11-18 16:48:03.816 +05:30 [DBG] Context 'EFLearningContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-11-18 16:48:03.838 +05:30 [DBG] Context 'EFLearningContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-11-18 16:48:03.989 +05:30 [DBG] Closing data reader to 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:48:04.119 +05:30 [DBG] A data reader for 'EFLearning' on server 'localhost,1433' is being disposed after spending 766ms reading results.
+2023-11-18 16:48:04.269 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:48:04.520 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (239ms).
+2023-11-18 16:48:04.908 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-11-18 16:48:04.930 +05:30 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2023-11-18 16:48:04.931 +05:30 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2023-11-18 16:48:04.934 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-11-18 16:48:04.934 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-11-18 16:48:04.946 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-11-18 16:48:04.948 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Core.ViewModels.EmployeeViewModel, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-18 16:48:05.127 +05:30 [INF] Executed action TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI) in 13860.8274ms
+2023-11-18 16:48:05.150 +05:30 [INF] Executed endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)'
+2023-11-18 16:48:05.213 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-18 16:48:05.364 +05:30 [DBG] Disposing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:48:05.448 +05:30 [DBG] Disposed connection to database '' on server '' (49ms).
+2023-11-18 16:48:05.478 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Employee - - - 200 - application/json;+charset=utf-8 14574.1287ms
+2023-11-18 16:48:27.185 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Employee - -
+2023-11-18 16:48:27.187 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Employee'
+2023-11-18 16:48:27.190 +05:30 [DBG] Endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)' with route pattern 'api/Employee' is valid for the request path '/api/Employee'
+2023-11-18 16:48:27.193 +05:30 [DBG] Request matched endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)'
+2023-11-18 16:48:27.197 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2023-11-18 16:48:27.202 +05:30 [INF] Executing endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)'
+2023-11-18 16:48:27.204 +05:30 [INF] Route matched with {action = "Get", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[Core.ViewModels.EmployeeViewModel]] Get() on controller TrainingAPI.Controllers.EmployeeController (TrainingAPI).
+2023-11-18 16:48:27.206 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-11-18 16:48:27.208 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-11-18 16:48:27.210 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-11-18 16:48:27.211 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-11-18 16:48:27.212 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-11-18 16:48:27.212 +05:30 [DBG] Executing controller factory for controller TrainingAPI.Controllers.EmployeeController (TrainingAPI)
+2023-11-18 16:48:27.218 +05:30 [DBG] Executed controller factory for controller TrainingAPI.Controllers.EmployeeController (TrainingAPI)
+2023-11-18 16:48:27.219 +05:30 [INF] Reading data from Get Request
+2023-11-18 16:48:27.466 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: None
+2023-11-18 16:48:27.469 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-11-18 16:48:27.469 +05:30 [DBG] Creating DbConnection.
+2023-11-18 16:48:27.471 +05:30 [DBG] Created DbConnection. (2ms).
+2023-11-18 16:48:27.472 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (3ms).
+2023-11-18 16:48:27.472 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2023-11-18 16:48:27.472 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:48:27.479 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:48:27.483 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedBy], [e].[CreatedOn], [e].[FirstName], [e].[Gender], [e].[LastName], [e].[UpdatedBy], [e].[UpdatedOn]
+FROM [Employees] AS [e]
+2023-11-18 16:48:27.514 +05:30 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedBy], [e].[CreatedOn], [e].[FirstName], [e].[Gender], [e].[LastName], [e].[UpdatedBy], [e].[UpdatedOn]
+FROM [Employees] AS [e]
+2023-11-18 16:48:27.516 +05:30 [DBG] Context 'EFLearningContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-11-18 16:48:27.516 +05:30 [DBG] Context 'EFLearningContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-11-18 16:48:27.517 +05:30 [DBG] Context 'EFLearningContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-11-18 16:48:27.518 +05:30 [DBG] Closing data reader to 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:48:27.518 +05:30 [DBG] A data reader for 'EFLearning' on server 'localhost,1433' is being disposed after spending 3ms reading results.
+2023-11-18 16:48:27.519 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:48:27.520 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (0ms).
+2023-11-18 16:48:27.522 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-11-18 16:48:27.525 +05:30 [DBG] No information found on request to perform content negotiation.
+2023-11-18 16:48:27.526 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-11-18 16:48:27.526 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-11-18 16:48:27.526 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-11-18 16:48:27.527 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Core.ViewModels.EmployeeViewModel, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-18 16:48:27.528 +05:30 [INF] Executed action TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI) in 315.3765ms
+2023-11-18 16:48:27.528 +05:30 [INF] Executed endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)'
+2023-11-18 16:48:27.531 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-18 16:48:27.535 +05:30 [DBG] Disposing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-18 16:48:27.535 +05:30 [DBG] Disposed connection to database '' on server '' (0ms).
+2023-11-18 16:48:27.536 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Employee - - - 200 - application/json;+charset=utf-8 351.0481ms
+2023-11-18 16:50:38.133 +05:30 [DBG] Connection id "0HMV84RO4GQ06" is closing.
+2023-11-18 16:50:38.138 +05:30 [DBG] Connection id "0HMV84RO4GQ06" is closed. The last processed stream ID was 3.
+2023-11-18 16:50:38.153 +05:30 [DBG] Connection id "0HMV84RO4GQ06" received FIN.
+2023-11-18 16:50:38.153 +05:30 [DBG] Connection id "0HMV84RO4GQ06" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-18 16:50:38.159 +05:30 [DBG] Connection id "0HMV84RO4GQ06" stopped.
+2023-11-18 18:19:26.029 +05:30 [INF] Application is shutting down...
+2023-11-18 18:19:26.032 +05:30 [DBG] Hosting stopping
+2023-11-18 18:19:26.064 +05:30 [DBG] Hosting stopped

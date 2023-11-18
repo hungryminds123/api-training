@@ -5,6 +5,7 @@ using TrainingAPI.Extensions;
 using FluentValidation;
 using Core.Validators;
 using Serilog;
+using AutoMapper;
 using TrainingAPI.Middleware;
 
 namespace TrainingAPI
@@ -21,7 +22,7 @@ namespace TrainingAPI
      * CORS - Cross Orgin Resource Policy (http://localhost:4200 , http://localhost:4300
      *
      *
-     *Middlware
+     *Middleware
      * Generic Exception Handler
      * Modify Swagger Response/ Explain Swagger
      * Request Pipeline .Net Core
@@ -29,6 +30,10 @@ namespace TrainingAPI
      * Securing Web API  - Json Web Token
      * Serilog ---
      *
+     *
+     *
+     *  
+     * 
      */
     public class Program
     {
@@ -39,8 +44,9 @@ namespace TrainingAPI
             var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
             // Add services to the container.
-
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             builder.Logging.ClearProviders();
+            
 
             string? environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
             
@@ -111,8 +117,6 @@ namespace TrainingAPI
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.MapControllers();
-            
-            
             
             app.Run();
         }
