@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using TrainingAPI.Extensions;
 using FluentValidation;
 using Core.Validators;
+using Serilog;
 using TrainingAPI.Middleware;
 
 namespace TrainingAPI
@@ -26,6 +27,7 @@ namespace TrainingAPI
      * Request Pipeline .Net Core
      * Kestrel Server
      * Securing Web API  - Json Web Token
+     * Serilog ---
      *
      */
     public class Program
@@ -38,10 +40,24 @@ namespace TrainingAPI
 
             // Add services to the container.
 
+            builder.Logging.ClearProviders();
+
+            string? environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            
+            var configuration = new ConfigurationBuilder()
+                .AddJsonFile($"appsettings.{environmentName}.json")
+                .Build();
+            
+            var serilog = new LoggerConfiguration()
+                .ReadFrom.Configuration(configuration)
+                .CreateLogger();
+
+            builder.Services.AddSerilog(serilog);
+            
             builder.Services.AddControllers();
 
 
-            builder.Services.AddCors();
+           // builder.Services.AddCors();
 
             builder.Services.AddCors(options =>
             {

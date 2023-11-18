@@ -11,14 +11,17 @@ namespace TrainingAPI.Controllers
     {
         private readonly IValidator<EmployeeViewModel> _validator;
         private readonly IEmployeeService _employeeService;
+        private readonly ILogger<EmployeeController> _logger;
 
         public EmployeeController(
             IValidator<EmployeeViewModel> validator,
-            IEmployeeService employeeService
+            IEmployeeService employeeService,
+            ILogger<EmployeeController> logger
             )
         {
             _validator = validator;
             _employeeService = employeeService;
+            _logger = logger;
         }
         
         [HttpGet]
@@ -26,6 +29,8 @@ namespace TrainingAPI.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IEnumerable<EmployeeViewModel>> Get()
         { 
+            _logger.LogInformation("Reading data from Get Request");
+            
             return await _employeeService.GetAllEmployees();
         }
 

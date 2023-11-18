@@ -17,9 +17,6 @@ namespace Core.Concrete
         public async Task<IEnumerable<EmployeeViewModel>> GetAllEmployees()
         {
             var response = await _employeeRepository.GetAll();
-
-            throw new NotImplementedException("Something went wrong!!");
-            
             return response.ConvertToEmployeeViewModel();
         }
 

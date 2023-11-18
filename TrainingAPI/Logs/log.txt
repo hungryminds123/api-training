@@ -1,0 +1,69 @@
+2023-11-18 16:01:34.705 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-11-18 16:01:35.022 +05:30 [DBG] Hosting starting
+2023-11-18 16:01:35.676 +05:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 5064DAA05F471EB6693E9A8289662C95D9A2D4AF)
+2023-11-18 16:01:36.825 +05:30 [INF] Now listening on: https://localhost:7182
+2023-11-18 16:01:36.826 +05:30 [INF] Now listening on: http://localhost:5091
+2023-11-18 16:01:36.827 +05:30 [DBG] Loaded hosting startup assembly TrainingAPI
+2023-11-18 16:01:36.832 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-18 16:01:36.835 +05:30 [INF] Hosting environment: Development
+2023-11-18 16:01:36.835 +05:30 [INF] Content root path: /home/rahul/SourceCode/TrainingSessions/api-training/TrainingAPI/
+2023-11-18 16:01:36.835 +05:30 [DBG] Hosting started
+2023-11-18 16:01:41.772 +05:30 [DBG] Connection id "0HMV84670I23U" accepted.
+2023-11-18 16:01:41.776 +05:30 [DBG] Connection id "0HMV84670I23U" started.
+2023-11-18 16:01:41.913 +05:30 [DBG] Connection id "0HMV84670I23U" received FIN.
+2023-11-18 16:01:41.920 +05:30 [DBG] Connection id "0HMV84670I23V" accepted.
+2023-11-18 16:01:41.932 +05:30 [DBG] Connection id "0HMV84670I23V" started.
+2023-11-18 16:01:42.048 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:0A000416:SSL routines::sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-11-18 16:01:42.083 +05:30 [DBG] Connection 0HMV84670I23V established using the following protocol: "Tls13"
+2023-11-18 16:01:42.189 +05:30 [DBG] Connection id "0HMV84670I23U" stopped.
+2023-11-18 16:01:42.192 +05:30 [DBG] Connection id "0HMV84670I23U" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-18 16:01:42.534 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger - -
+2023-11-18 16:01:42.541 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-11-18 16:01:42.672 +05:30 [DBG] No candidates found for the request path '/swagger'
+2023-11-18 16:01:42.673 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:01:42.872 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - -
+2023-11-18 16:01:42.875 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-11-18 16:01:42.875 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:01:42.912 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger - - - 301 0 - 396.6522ms
+2023-11-18 16:01:43.967 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - - - 200 - text/html;charset=utf-8 1095.4939ms
+2023-11-18 16:01:44.053 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - -
+2023-11-18 16:01:44.054 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2023-11-18 16:01:44.054 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:01:44.055 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - -
+2023-11-18 16:01:44.055 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2023-11-18 16:01:44.056 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:01:44.055 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - -
+2023-11-18 16:01:44.057 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-11-18 16:01:44.058 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:01:44.300 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-11-18 16:01:44.301 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-11-18 16:01:44.331 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-11-18 16:01:44.350 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 297.0779ms
+2023-11-18 16:01:44.352 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 296.9581ms
+2023-11-18 16:01:44.352 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - - - 200 144929 text/css 297.6656ms
+2023-11-18 16:01:45.190 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - -
+2023-11-18 16:01:45.191 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-11-18 16:01:45.191 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:01:45.205 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - -
+2023-11-18 16:01:45.205 +05:30 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-11-18 16:01:45.206 +05:30 [DBG] Request did not match any endpoints
+2023-11-18 16:01:45.206 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-11-18 16:01:45.208 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - - - 200 628 image/png 3.0133ms
+2023-11-18 16:01:45.768 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 578.6159ms
+2023-11-18 16:03:57.205 +05:30 [DBG] Connection id "0HMV84670I23V" is closing.
+2023-11-18 16:03:57.216 +05:30 [DBG] Connection id "0HMV84670I23V" is closed. The last processed stream ID was 13.
+2023-11-18 16:03:57.218 +05:30 [DBG] Connection id "0HMV84670I23V" received FIN.
+2023-11-18 16:03:57.219 +05:30 [DBG] Connection id "0HMV84670I23V" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-18 16:03:57.222 +05:30 [DBG] Connection id "0HMV84670I23V" stopped.
+2023-11-18 16:04:32.581 +05:30 [INF] Application is shutting down...
+2023-11-18 16:04:32.584 +05:30 [DBG] Hosting stopping
+2023-11-18 16:04:32.609 +05:30 [DBG] Hosting stopped
