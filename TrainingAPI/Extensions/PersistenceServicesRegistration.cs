@@ -12,11 +12,8 @@ namespace TrainingAPI.Extensions
             )
         {
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-
             return services;
-
         }
 
         public static IServiceCollection ConfigureCoreServices(
@@ -24,7 +21,6 @@ namespace TrainingAPI.Extensions
            )
         {
             services.AddScoped<IEmployeeService, EmployeeService>();
-
             return services;
         }
 

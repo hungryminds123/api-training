@@ -1,10 +1,7 @@
 ﻿using Core.Interfaces;
-using Core.Validators;
 using Core.ViewModels;
 using FluentValidation;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Server.IIS.Core;
 
 namespace TrainingAPI.Controllers
 {
@@ -12,19 +9,21 @@ namespace TrainingAPI.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
-        private readonly IValidator<EmployeeViewModel> validator;
+        private readonly IValidator<EmployeeViewModel> _validator;
         private readonly IEmployeeService _employeeService;
 
         public EmployeeController(
             IValidator<EmployeeViewModel> validator,
-            IEmployeeService employeeService)
+            IEmployeeService employeeService
+            )
         {
-            this.validator = validator;
+            _validator = validator;
             _employeeService = employeeService;
         }
-
-
+        
         [HttpGet]
+        [ProducesResponseType(typeof(EmployeeViewModel), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IEnumerable<EmployeeViewModel>> Get()
         { 
             return await _employeeService.GetAllEmployees();
@@ -36,8 +35,7 @@ namespace TrainingAPI.Controllers
         {
             return await _employeeService.GetEmployeeById(id);
         }
-
-
+        
         [HttpPut]
         public async Task<EmployeeViewModel> Update([FromBody] EmployeeViewModel empModel)
         {
@@ -47,15 +45,11 @@ namespace TrainingAPI.Controllers
            // return await _employeeService.GetEmployeeById(id);
         }
 
-
-
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] EmployeeViewModel empModel)
         {
             var response = await _employeeService.InsertEmployee(empModel);
             return Ok(response);
-
         }
-
     }
 }

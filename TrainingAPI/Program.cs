@@ -1,8 +1,10 @@
+using Core.Models;
 using Domain;
 using Microsoft.EntityFrameworkCore;
 using TrainingAPI.Extensions;
 using FluentValidation;
 using Core.Validators;
+using TrainingAPI.Middleware;
 
 namespace TrainingAPI
 {
@@ -52,16 +54,20 @@ namespace TrainingAPI
                                                 .AllowAnyMethod();
                                   });
             });
-
-
+            
             builder.Services.AddValidatorsFromAssemblyContaining<EmployeeViewModelValidator>();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
 
-            builder.Services.AddDbContext<EFLearningContext>(x =>
+            UserSpecificSettings userSpecificSettings = new UserSpecificSettings();
+            builder.Configuration.GetSection("UserSpecificSettings").Bind(userSpecificSettings);
+              
+
+            builder.Services.AddDbContext<EFLearningContext>(
+                x =>
             {
-                x.UseSqlServer("Server=.;Database=EFLearning;Trusted_Connection=True;TrustServerCertificate=True");
+                x.UseSqlServer(builder.Configuration.GetConnectionString("EFLearningConnectionString"));
             });
 
             builder.Services.ConfigurePersistenceServices();
@@ -78,16 +84,20 @@ namespace TrainingAPI
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            
             app.UseCors(MyAllowSpecificOrigins);
-
+            
+            // Register Middlewares
+            app.UseMiddleware<ReadJwtTokenMiddleware>();
+            
+            app.ConfigureExceptionHandler();    //Injected generic middle ware
+            
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
-
             app.MapControllers();
-
+            
+            
+            
             app.Run();
         }
     }

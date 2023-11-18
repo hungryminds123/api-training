@@ -18,6 +18,8 @@ namespace Core.Concrete
         {
             var response = await _employeeRepository.GetAll();
 
+            throw new NotImplementedException("Something went wrong!!");
+            
             return response.ConvertToEmployeeViewModel();
         }
 

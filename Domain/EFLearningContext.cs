@@ -14,7 +14,7 @@ namespace Domain
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(EFLearningContext).Assembly);
         }
-
+        
         public DbSet<Employee> Employees { get; set;}
     }
 }
