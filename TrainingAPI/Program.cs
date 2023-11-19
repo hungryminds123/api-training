@@ -97,6 +97,8 @@ namespace TrainingAPI
 
             //builder.Services.AddTransient<IValidator<EmployeeViewModel>, EmployeeViewModelValidator>();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddAuthorization();
+            builder.Services.RegisterJsonWebToken();
 
             var app = builder.Build();
 
@@ -115,6 +117,8 @@ namespace TrainingAPI
             app.ConfigureExceptionHandler();    //Injected generic middle ware
             
             app.UseHttpsRedirection();
+            
+            app.UseAuthentication();
             app.UseAuthorization();
             app.MapControllers();
             

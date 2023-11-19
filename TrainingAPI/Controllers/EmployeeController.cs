@@ -1,10 +1,13 @@
 ﻿using Core.Interfaces;
 using Core.ViewModels;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace TrainingAPI.Controllers
 {
+
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class EmployeeController : ControllerBase
@@ -34,6 +37,7 @@ namespace TrainingAPI.Controllers
             return await _employeeService.GetAllEmployees();
         }
 
+        [AllowAnonymous]
         [HttpGet]
         [Route("getById/{id}")]
         public async Task<EmployeeViewModel> GetById(int id)
@@ -50,7 +54,7 @@ namespace TrainingAPI.Controllers
            // return await _employeeService.GetEmployeeById(id);
         }
 
-        [HttpPost]
+        [HttpPost] 
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(bool), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Post([FromBody] EmployeeViewModel empModel)
