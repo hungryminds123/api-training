@@ -1,5 +1,6 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
+using TrainingAPI.OptionSetup;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace TrainingAPI.Extensions;
 
@@ -8,6 +9,8 @@ public static class DependencyRegistration
     public static IServiceCollection RegisterJsonWebToken(this IServiceCollection services)
     {
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
+        services.ConfigureOptions<JwtOptionSetup>();
+        services.ConfigureOptions<JwtBearerOptionSetup>();
         return services;
     }
 
