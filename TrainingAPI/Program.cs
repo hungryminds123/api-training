@@ -1,12 +1,11 @@
-using Core.Models;
-using Domain;
-using Microsoft.EntityFrameworkCore;
-using TrainingAPI.Extensions;
-using FluentValidation;
-using Core.Validators;
 using Serilog;
-using AutoMapper;
+using Domain;
+using Core.Models;
+using Core.Validators;
+using FluentValidation;
+using TrainingAPI.Extensions;
 using TrainingAPI.Middleware;
+using Microsoft.EntityFrameworkCore;
 
 namespace TrainingAPI
 {
@@ -30,11 +29,7 @@ namespace TrainingAPI
      * Securing Web API  - Json Web Token
      * Serilog ---
      *
-     *
-     *
-     *  
-     * 
-     */
+     * */
     public class Program
     {
         public static void Main(string[] args)
@@ -57,7 +52,8 @@ namespace TrainingAPI
             var serilog = new LoggerConfiguration()
                 .ReadFrom.Configuration(configuration)
                 .CreateLogger();
-
+            builder.Services.RegisterSwagger();
+            
             builder.Services.AddSerilog(serilog);
             
             builder.Services.AddControllers();
@@ -89,7 +85,8 @@ namespace TrainingAPI
             builder.Services.AddDbContext<EFLearningContext>(
                 x =>
             {
-                x.UseSqlServer(builder.Configuration.GetConnectionString("EFLearningConnectionString"));
+                x.UseSqlServer(builder.Configuration.GetConnectionString("EFLearningConnectionString"), 
+                    x => x.MigrationsAssembly("Domain"));
             });
 
             builder.Services.ConfigurePersistenceServices();
@@ -97,6 +94,7 @@ namespace TrainingAPI
 
             //builder.Services.AddTransient<IValidator<EmployeeViewModel>, EmployeeViewModelValidator>();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddAuthentication();
             builder.Services.AddAuthorization();
             builder.Services.RegisterJsonWebToken();
 
@@ -117,7 +115,6 @@ namespace TrainingAPI
             app.ConfigureExceptionHandler();    //Injected generic middle ware
             
             app.UseHttpsRedirection();
-            
             app.UseAuthentication();
             app.UseAuthorization();
             app.MapControllers();

@@ -1,5 +1,6 @@
 ﻿using Core.Concrete;
 using Core.Interfaces;
+using Core.ViewModels;
 using Persistence.Repositories.Concrete;
 using Persistence.Repositories.Interface;
 
@@ -13,6 +14,7 @@ namespace TrainingAPI.Extensions
         {
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
             return services;
         }
 
@@ -21,6 +23,7 @@ namespace TrainingAPI.Extensions
            )
         {
             services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<IAuthService, AuthService>();
             return services;
         }
 
