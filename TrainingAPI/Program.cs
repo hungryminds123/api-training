@@ -85,8 +85,7 @@ namespace TrainingAPI
             builder.Services.AddDbContext<EFLearningContext>(
                 x =>
             {
-                x.UseSqlServer(builder.Configuration.GetConnectionString("EFLearningConnectionString"), 
-                    x => x.MigrationsAssembly("Domain"));
+                x.UseSqlServer(builder.Configuration.GetConnectionString("EFLearningConnectionString"));
             });
 
             builder.Services.ConfigurePersistenceServices();

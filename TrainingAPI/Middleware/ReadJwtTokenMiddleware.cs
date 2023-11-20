@@ -6,7 +6,6 @@ public class ReadJwtTokenMiddleware
 
     private readonly RequestDelegate _next;
     
-
     public ReadJwtTokenMiddleware(RequestDelegate next)
     {
         _next = next;
