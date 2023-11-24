@@ -1,3 +1,5 @@
+using Core.Concrete;
+using Core.Interfaces;
 using Microsoft.OpenApi.Models;
 using TrainingAPI.OptionSetup;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -44,6 +46,15 @@ public static class DependencyRegistration
                 }
             });
         });
+        return services;
+    }
+    
+    public static IServiceCollection ConfigureCoreServices(
+        this IServiceCollection services
+    )
+    {
+        services.AddScoped<IEmployeeService, EmployeeService>();
+        services.AddScoped<IAuthService, AuthService>();
         return services;
     }
 }

@@ -1,7 +1,4 @@
-﻿using Core.Concrete;
-using Core.Interfaces;
-using Core.ViewModels;
-using Persistence.Repositories.Concrete;
+﻿using Persistence.Repositories.Concrete;
 using Persistence.Repositories.Interface;
 
 namespace TrainingAPI.Extensions
@@ -17,15 +14,5 @@ namespace TrainingAPI.Extensions
             services.AddScoped<IUserRepository, UserRepository>();
             return services;
         }
-
-        public static IServiceCollection ConfigureCoreServices(
-           this IServiceCollection services
-           )
-        {
-            services.AddScoped<IEmployeeService, EmployeeService>();
-            services.AddScoped<IAuthService, AuthService>();
-            return services;
-        }
-
     }
 }

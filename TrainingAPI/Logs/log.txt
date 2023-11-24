@@ -2690,3 +2690,899 @@ DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
 2023-11-20 13:37:37.241 +05:30 [DBG] Connection id "0HMV9JTIQAOUG" sending FIN because: "The Socket transport's send loop completed gracefully."
 2023-11-20 13:37:37.245 +05:30 [DBG] Connection id "0HMV9JTIQAOUG" stopped.
 2023-11-20 13:37:37.252 +05:30 [DBG] Hosting stopped
+2023-11-20 14:35:12.857 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-11-20 14:35:13.023 +05:30 [DBG] Hosting starting
+2023-11-20 14:35:13.048 +05:30 [INF] User profile is available. Using '/home/rahul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-11-20 14:35:13.053 +05:30 [DBG] Reading data from file '/home/rahul/.aspnet/DataProtection-Keys/key-4036704d-369f-48d6-9c56-d8cfbb602e9d.xml'.
+2023-11-20 14:35:13.080 +05:30 [DBG] Found key {4036704d-369f-48d6-9c56-d8cfbb602e9d}.
+2023-11-20 14:35:13.124 +05:30 [DBG] Considering key {4036704d-369f-48d6-9c56-d8cfbb602e9d} with expiration date 2024-01-25 04:42:12Z as default key.
+2023-11-20 14:35:13.129 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-11-20 14:35:13.134 +05:30 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-11-20 14:35:13.135 +05:30 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-11-20 14:35:13.165 +05:30 [DBG] Using key {4036704d-369f-48d6-9c56-d8cfbb602e9d} as the default key.
+2023-11-20 14:35:13.167 +05:30 [DBG] Key ring with default key {4036704d-369f-48d6-9c56-d8cfbb602e9d} was loaded during application startup.
+2023-11-20 14:35:13.440 +05:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 5064DAA05F471EB6693E9A8289662C95D9A2D4AF)
+2023-11-20 14:35:14.016 +05:30 [INF] Now listening on: https://localhost:7182
+2023-11-20 14:35:14.017 +05:30 [INF] Now listening on: http://localhost:5091
+2023-11-20 14:35:14.018 +05:30 [DBG] Loaded hosting startup assembly TrainingAPI
+2023-11-20 14:35:14.019 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-20 14:35:14.019 +05:30 [INF] Hosting environment: Development
+2023-11-20 14:35:14.020 +05:30 [INF] Content root path: /home/rahul/SourceCode/TrainingSessions/api-training/TrainingAPI/
+2023-11-20 14:35:14.020 +05:30 [DBG] Hosting started
+2023-11-20 14:35:14.074 +05:30 [DBG] Connection id "0HMV9KV7C01J0" accepted.
+2023-11-20 14:35:14.076 +05:30 [DBG] Connection id "0HMV9KV7C01J0" started.
+2023-11-20 14:35:14.149 +05:30 [DBG] Connection id "0HMV9KV7C01J0" received FIN.
+2023-11-20 14:35:14.159 +05:30 [DBG] Connection id "0HMV9KV7C01J1" accepted.
+2023-11-20 14:35:14.160 +05:30 [DBG] Connection id "0HMV9KV7C01J1" started.
+2023-11-20 14:35:14.187 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:0A000416:SSL routines::sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-11-20 14:35:14.214 +05:30 [DBG] Connection 0HMV9KV7C01J1 established using the following protocol: "Tls13"
+2023-11-20 14:35:14.243 +05:30 [DBG] Connection id "0HMV9KV7C01J0" stopped.
+2023-11-20 14:35:14.246 +05:30 [DBG] Connection id "0HMV9KV7C01J0" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-20 14:35:14.363 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger - -
+2023-11-20 14:35:14.365 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-11-20 14:35:14.425 +05:30 [DBG] No candidates found for the request path '/swagger'
+2023-11-20 14:35:14.426 +05:30 [DBG] Request did not match any endpoints
+2023-11-20 14:35:14.524 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger - - - 301 0 - 168.2623ms
+2023-11-20 14:35:14.527 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - -
+2023-11-20 14:35:14.527 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-11-20 14:35:14.528 +05:30 [DBG] Request did not match any endpoints
+2023-11-20 14:35:15.006 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - - - 200 - text/html;charset=utf-8 479.5122ms
+2023-11-20 14:35:15.043 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - -
+2023-11-20 14:35:15.044 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2023-11-20 14:35:15.044 +05:30 [DBG] Request did not match any endpoints
+2023-11-20 14:35:15.045 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - -
+2023-11-20 14:35:15.046 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2023-11-20 14:35:15.048 +05:30 [DBG] Request did not match any endpoints
+2023-11-20 14:35:15.044 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - -
+2023-11-20 14:35:15.051 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-11-20 14:35:15.052 +05:30 [DBG] Request did not match any endpoints
+2023-11-20 14:35:15.100 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-11-20 14:35:15.151 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - - - 200 144929 text/css 107.4401ms
+2023-11-20 14:35:15.169 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-11-20 14:35:15.181 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-11-20 14:35:15.191 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 147.6915ms
+2023-11-20 14:35:15.191 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 146.4083ms
+2023-11-20 14:35:15.689 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - -
+2023-11-20 14:35:15.692 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-11-20 14:35:15.693 +05:30 [DBG] Request did not match any endpoints
+2023-11-20 14:35:16.060 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 371.5316ms
+2023-11-20 14:35:35.828 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - -
+2023-11-20 14:35:35.829 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-11-20 14:35:35.829 +05:30 [DBG] Request did not match any endpoints
+2023-11-20 14:35:35.830 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - - - 200 - text/html;charset=utf-8 1.9547ms
+2023-11-20 14:35:36.000 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - -
+2023-11-20 14:35:36.003 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-11-20 14:35:36.008 +05:30 [DBG] Request did not match any endpoints
+2023-11-20 14:35:36.020 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - -
+2023-11-20 14:35:36.021 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 20.4544ms
+2023-11-20 14:35:36.021 +05:30 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-11-20 14:35:36.025 +05:30 [DBG] Request did not match any endpoints
+2023-11-20 14:35:36.027 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-11-20 14:35:36.029 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - - - 200 628 image/png 8.9550ms
+2023-11-20 14:35:49.985 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Authentication?userName=abc%40gmail.com&password=Password%40123 - -
+2023-11-20 14:35:50.013 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Authentication'
+2023-11-20 14:35:50.036 +05:30 [DBG] Endpoint 'TrainingAPI.Controllers.AuthenticationController.ValidateUser (TrainingAPI)' with route pattern 'api/Authentication' is valid for the request path '/api/Authentication'
+2023-11-20 14:35:50.038 +05:30 [DBG] Request matched endpoint 'TrainingAPI.Controllers.AuthenticationController.ValidateUser (TrainingAPI)'
+2023-11-20 14:35:50.039 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2023-11-20 14:35:50.134 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2023-11-20 14:35:50.138 +05:30 [INF] Executing endpoint 'TrainingAPI.Controllers.AuthenticationController.ValidateUser (TrainingAPI)'
+2023-11-20 14:35:50.234 +05:30 [INF] Route matched with {action = "ValidateUser", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Core.ViewModels.AuthModel] ValidateUser(System.String, System.String) on controller TrainingAPI.Controllers.AuthenticationController (TrainingAPI).
+2023-11-20 14:35:50.236 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-11-20 14:35:50.237 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-11-20 14:35:50.238 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-11-20 14:35:50.238 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-11-20 14:35:50.238 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-11-20 14:35:50.240 +05:30 [DBG] Executing controller factory for controller TrainingAPI.Controllers.AuthenticationController (TrainingAPI)
+2023-11-20 14:35:50.700 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-11-20 14:35:50.794 +05:30 [DBG] Executed controller factory for controller TrainingAPI.Controllers.AuthenticationController (TrainingAPI)
+2023-11-20 14:35:50.827 +05:30 [DBG] Attempting to bind parameter 'userName' of type 'System.String' ...
+2023-11-20 14:35:50.832 +05:30 [DBG] Attempting to bind parameter 'userName' of type 'System.String' using the name 'userName' in request data ...
+2023-11-20 14:35:50.836 +05:30 [DBG] Done attempting to bind parameter 'userName' of type 'System.String'.
+2023-11-20 14:35:50.836 +05:30 [DBG] Done attempting to bind parameter 'userName' of type 'System.String'.
+2023-11-20 14:35:50.837 +05:30 [DBG] Attempting to validate the bound parameter 'userName' of type 'System.String' ...
+2023-11-20 14:35:50.853 +05:30 [DBG] Done attempting to validate the bound parameter 'userName' of type 'System.String'.
+2023-11-20 14:35:50.861 +05:30 [DBG] Attempting to bind parameter 'password' of type 'System.String' ...
+2023-11-20 14:35:50.862 +05:30 [DBG] Attempting to bind parameter 'password' of type 'System.String' using the name 'password' in request data ...
+2023-11-20 14:35:50.862 +05:30 [DBG] Done attempting to bind parameter 'password' of type 'System.String'.
+2023-11-20 14:35:50.863 +05:30 [DBG] Done attempting to bind parameter 'password' of type 'System.String'.
+2023-11-20 14:35:50.863 +05:30 [DBG] Attempting to validate the bound parameter 'password' of type 'System.String' ...
+2023-11-20 14:35:50.864 +05:30 [DBG] Done attempting to validate the bound parameter 'password' of type 'System.String'.
+2023-11-20 14:35:53.208 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: MigrationsAssembly=Domain 
+2023-11-20 14:35:53.511 +05:30 [DBG] Compiling query expression: 
+'DbSet<User>()
+    .FirstOrDefault(x => x.UserEmail.Equals(__userName_0) && x.UserPassword.Equals(__password_1))'
+2023-11-20 14:35:54.318 +05:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<User>(
+    asyncEnumerable: new SingleQueryingEnumerable<User>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.UserId (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.FirstName (string) Required MaxLength(100), 1], [Property: User.LastName (string) Required MaxLength(100), 2], [Property: User.UserEmail (string) Required MaxLength(250), 3], [Property: User.UserPassword (string) Required MaxLength(200), 4] }
+            SELECT TOP(1) u.UserId, u.FirstName, u.LastName, u.UserEmail, u.UserPassword
+            FROM Users AS u
+            WHERE (u.UserEmail == @__userName_0) && (u.UserPassword == @__password_1)), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+        Domain.EFLearningContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2023-11-20 14:35:54.495 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-11-20 14:35:54.502 +05:30 [DBG] Creating DbConnection.
+2023-11-20 14:35:54.609 +05:30 [DBG] Created DbConnection. (89ms).
+2023-11-20 14:35:54.642 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (138ms).
+2023-11-20 14:35:54.681 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (194ms).
+2023-11-20 14:35:54.697 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 14:35:55.295 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 14:35:55.356 +05:30 [DBG] Executing DbCommand [Parameters=[@__userName_0='?' (Size = 250), @__password_1='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[FirstName], [u].[LastName], [u].[UserEmail], [u].[UserPassword]
+FROM [Users] AS [u]
+WHERE [u].[UserEmail] = @__userName_0 AND [u].[UserPassword] = @__password_1
+2023-11-20 14:35:55.572 +05:30 [INF] Executed DbCommand (230ms) [Parameters=[@__userName_0='?' (Size = 250), @__password_1='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[FirstName], [u].[LastName], [u].[UserEmail], [u].[UserPassword]
+FROM [Users] AS [u]
+WHERE [u].[UserEmail] = @__userName_0 AND [u].[UserPassword] = @__password_1
+2023-11-20 14:35:55.732 +05:30 [DBG] Context 'EFLearningContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-11-20 14:35:55.804 +05:30 [DBG] Closing data reader to 'EFLearning' on server 'localhost,1433'.
+2023-11-20 14:35:55.836 +05:30 [DBG] A data reader for 'EFLearning' on server 'localhost,1433' is being disposed after spending 240ms reading results.
+2023-11-20 14:35:55.851 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 14:35:55.881 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (30ms).
+2023-11-20 14:35:56.013 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-11-20 14:35:56.023 +05:30 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2023-11-20 14:35:56.024 +05:30 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2023-11-20 14:35:56.025 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-11-20 14:35:56.026 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-11-20 14:35:56.027 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-11-20 14:35:56.028 +05:30 [INF] Executing ObjectResult, writing value of type 'Core.ViewModels.AuthModel'.
+2023-11-20 14:35:56.135 +05:30 [INF] Executed action TrainingAPI.Controllers.AuthenticationController.ValidateUser (TrainingAPI) in 5878.5289ms
+2023-11-20 14:35:56.140 +05:30 [INF] Executed endpoint 'TrainingAPI.Controllers.AuthenticationController.ValidateUser (TrainingAPI)'
+2023-11-20 14:35:56.167 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-20 14:35:56.191 +05:30 [DBG] Disposing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 14:35:56.201 +05:30 [DBG] Disposed connection to database '' on server '' (7ms).
+2023-11-20 14:35:56.205 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Authentication?userName=abc%40gmail.com&password=Password%40123 - - - 200 - application/json;+charset=utf-8 6220.5584ms
+2023-11-20 14:36:16.390 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Employee - -
+2023-11-20 14:36:16.395 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Employee'
+2023-11-20 14:36:16.399 +05:30 [DBG] Endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)' with route pattern 'api/Employee' is valid for the request path '/api/Employee'
+2023-11-20 14:36:16.400 +05:30 [DBG] Request matched endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)'
+2023-11-20 14:36:16.400 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2023-11-20 14:36:16.587 +05:30 [DBG] Successfully validated the token.
+2023-11-20 14:36:16.589 +05:30 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2023-11-20 14:36:16.604 +05:30 [DBG] Authorization was successful.
+2023-11-20 14:36:16.606 +05:30 [INF] Executing endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)'
+2023-11-20 14:36:16.616 +05:30 [INF] Route matched with {action = "Get", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[Core.ViewModels.EmployeeViewModel]] Get() on controller TrainingAPI.Controllers.EmployeeController (TrainingAPI).
+2023-11-20 14:36:16.617 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-11-20 14:36:16.617 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-11-20 14:36:16.618 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-11-20 14:36:16.618 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-11-20 14:36:16.618 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-11-20 14:36:16.619 +05:30 [DBG] Executing controller factory for controller TrainingAPI.Controllers.EmployeeController (TrainingAPI)
+2023-11-20 14:36:17.038 +05:30 [DBG] Executed controller factory for controller TrainingAPI.Controllers.EmployeeController (TrainingAPI)
+2023-11-20 14:36:17.042 +05:30 [INF] Reading data from Get Request
+2023-11-20 14:36:17.170 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: MigrationsAssembly=Domain 
+2023-11-20 14:36:17.184 +05:30 [DBG] Compiling query expression: 
+'DbSet<Employee>()'
+2023-11-20 14:36:17.191 +05:30 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Employee>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Employee.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Employee.CreatedBy (string) Required, 1], [Property: Employee.CreatedOn (DateTime) Required, 2], [Property: Employee.FirstName (string) MaxLength(100), 3], [Property: Employee.Gender (string) MaxLength(2), 4], [Property: Employee.LastName (string) MaxLength(100), 5], [Property: Employee.UpdatedBy (string), 6], [Property: Employee.UpdatedOn (DateTime) Required, 7] }
+        SELECT e.Id, e.CreatedBy, e.CreatedOn, e.FirstName, e.Gender, e.LastName, e.UpdatedBy, e.UpdatedOn
+        FROM Employees AS e), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Employee>, 
+    Domain.EFLearningContext, 
+    False, 
+    False, 
+    True
+)'
+2023-11-20 14:36:17.193 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-11-20 14:36:17.193 +05:30 [DBG] Creating DbConnection.
+2023-11-20 14:36:17.194 +05:30 [DBG] Created DbConnection. (0ms).
+2023-11-20 14:36:17.194 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2023-11-20 14:36:17.195 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (1ms).
+2023-11-20 14:36:17.195 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 14:36:17.200 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 14:36:17.201 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedBy], [e].[CreatedOn], [e].[FirstName], [e].[Gender], [e].[LastName], [e].[UpdatedBy], [e].[UpdatedOn]
+FROM [Employees] AS [e]
+2023-11-20 14:36:17.228 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreatedBy], [e].[CreatedOn], [e].[FirstName], [e].[Gender], [e].[LastName], [e].[UpdatedBy], [e].[UpdatedOn]
+FROM [Employees] AS [e]
+2023-11-20 14:36:17.250 +05:30 [DBG] Context 'EFLearningContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-11-20 14:36:17.301 +05:30 [DBG] Context 'EFLearningContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-11-20 14:36:17.302 +05:30 [DBG] Context 'EFLearningContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-11-20 14:36:17.302 +05:30 [DBG] Closing data reader to 'EFLearning' on server 'localhost,1433'.
+2023-11-20 14:36:17.303 +05:30 [DBG] A data reader for 'EFLearning' on server 'localhost,1433' is being disposed after spending 74ms reading results.
+2023-11-20 14:36:17.304 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 14:36:17.305 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (0ms).
+2023-11-20 14:36:17.380 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-11-20 14:36:17.380 +05:30 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2023-11-20 14:36:17.380 +05:30 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2023-11-20 14:36:17.381 +05:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-11-20 14:36:17.381 +05:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-11-20 14:36:17.381 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-11-20 14:36:17.381 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Core.ViewModels.EmployeeViewModel, Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-20 14:36:17.400 +05:30 [INF] Executed action TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI) in 781.1471ms
+2023-11-20 14:36:17.400 +05:30 [INF] Executed endpoint 'TrainingAPI.Controllers.EmployeeController.Get (TrainingAPI)'
+2023-11-20 14:36:17.430 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-20 14:36:17.431 +05:30 [DBG] Disposing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 14:36:17.431 +05:30 [DBG] Disposed connection to database '' on server '' (1ms).
+2023-11-20 14:36:17.432 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Employee - - - 200 - application/json;+charset=utf-8 1042.0102ms
+2023-11-20 14:38:28.281 +05:30 [DBG] Connection id "0HMV9KV7C01J1" is closing.
+2023-11-20 14:38:28.281 +05:30 [DBG] Connection id "0HMV9KV7C01J1" is closed. The last processed stream ID was 21.
+2023-11-20 14:38:28.283 +05:30 [DBG] Connection id "0HMV9KV7C01J1" received FIN.
+2023-11-20 14:38:28.285 +05:30 [DBG] Connection id "0HMV9KV7C01J1" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-20 14:38:28.288 +05:30 [DBG] Connection id "0HMV9KV7C01J1" stopped.
+2023-11-20 14:39:06.710 +05:30 [INF] Application is shutting down...
+2023-11-20 14:39:06.713 +05:30 [DBG] Hosting stopping
+2023-11-20 14:39:06.746 +05:30 [DBG] Hosting stopped
+2023-11-20 16:16:40.870 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-11-20 16:16:42.033 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: MigrationsAssembly=Domain 
+2023-11-20 16:16:42.074 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-20 16:18:16.264 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-11-20 16:18:17.464 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: None
+2023-11-20 16:18:17.508 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-20 16:22:36.835 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-11-20 16:22:38.024 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: None
+2023-11-20 16:22:38.427 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-20 16:24:26.982 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-11-20 16:24:28.172 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: None
+2023-11-20 16:24:28.209 +05:30 [DBG] Creating DbConnection.
+2023-11-20 16:24:28.282 +05:30 [DBG] Created DbConnection. (64ms).
+2023-11-20 16:24:28.298 +05:30 [DBG] Migrating using database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:28.313 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.230 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.246 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-11-20 16:24:29.265 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (14ms).
+2023-11-20 16:24:29.268 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (30ms).
+2023-11-20 16:24:29.287 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-20 16:24:29.342 +05:30 [INF] Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-20 16:24:29.346 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.368 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (10ms).
+2023-11-20 16:24:29.381 +05:30 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-11-20 16:24:29.381 +05:30 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-11-20 16:24:29.382 +05:30 [DBG] Initialized DbCommand for 'ExecuteScalar' (1ms).
+2023-11-20 16:24:29.382 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.384 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.385 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-20 16:24:29.423 +05:30 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-20 16:24:29.423 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.425 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (2ms).
+2023-11-20 16:24:29.427 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.428 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.428 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-11-20 16:24:29.428 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-11-20 16:24:29.429 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-11-20 16:24:29.429 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-20 16:24:29.433 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-20 16:24:29.433 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.434 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (0ms).
+2023-11-20 16:24:29.434 +05:30 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-11-20 16:24:29.435 +05:30 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-11-20 16:24:29.435 +05:30 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2023-11-20 16:24:29.435 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.436 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.436 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-20 16:24:29.439 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-20 16:24:29.440 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.441 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (0ms).
+2023-11-20 16:24:29.476 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-11-20 16:24:29.477 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-11-20 16:24:29.477 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-11-20 16:24:29.477 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.478 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.478 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-20 16:24:29.488 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-20 16:24:29.492 +05:30 [DBG] Closing data reader to 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.495 +05:30 [DBG] A data reader for 'EFLearning' on server 'localhost,1433' is being disposed after spending 4ms reading results.
+2023-11-20 16:24:29.496 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.497 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (0ms).
+2023-11-20 16:24:29.525 +05:30 [INF] Applying migration '20231120105238_AddedUserTable'.
+2023-11-20 16:24:29.615 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.615 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.618 +05:30 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-11-20 16:24:29.636 +05:30 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2023-11-20 16:24:29.639 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-11-20 16:24:29.639 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-11-20 16:24:29.643 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (3ms).
+2023-11-20 16:24:29.643 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [UserId] int NOT NULL IDENTITY,
+    [FirstName] nvarchar(100) NOT NULL,
+    [LastName] nvarchar(100) NOT NULL,
+    [UserPassword] nvarchar(200) NOT NULL,
+    [UserEmail] nvarchar(250) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([UserId])
+);
+2023-11-20 16:24:29.656 +05:30 [ERR] Failed executing DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [UserId] int NOT NULL IDENTITY,
+    [FirstName] nvarchar(100) NOT NULL,
+    [LastName] nvarchar(100) NOT NULL,
+    [UserPassword] nvarchar(200) NOT NULL,
+    [UserEmail] nvarchar(250) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([UserId])
+);
+2023-11-20 16:24:29.661 +05:30 [DBG] Disposing transaction.
+2023-11-20 16:24:29.662 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.662 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (0ms).
+2023-11-20 16:24:29.665 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-20 16:24:29.668 +05:30 [DBG] Disposing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:24:29.670 +05:30 [DBG] Disposed connection to database '' on server '' (1ms).
+2023-11-20 16:24:59.193 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-11-20 16:25:00.394 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: None
+2023-11-20 16:25:00.435 +05:30 [DBG] Creating DbConnection.
+2023-11-20 16:25:00.507 +05:30 [DBG] Created DbConnection. (64ms).
+2023-11-20 16:25:00.525 +05:30 [DBG] Migrating using database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:00.537 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.484 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.499 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-11-20 16:25:01.521 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (15ms).
+2023-11-20 16:25:01.524 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (33ms).
+2023-11-20 16:25:01.539 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-20 16:25:01.596 +05:30 [INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-20 16:25:01.601 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.623 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (11ms).
+2023-11-20 16:25:01.632 +05:30 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-11-20 16:25:01.632 +05:30 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-11-20 16:25:01.633 +05:30 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2023-11-20 16:25:01.633 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.635 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.636 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-20 16:25:01.673 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-20 16:25:01.673 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.675 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (1ms).
+2023-11-20 16:25:01.678 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.678 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.678 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-11-20 16:25:01.679 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-11-20 16:25:01.679 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-11-20 16:25:01.679 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-20 16:25:01.684 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-20 16:25:01.685 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.685 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (0ms).
+2023-11-20 16:25:01.686 +05:30 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-11-20 16:25:01.686 +05:30 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-11-20 16:25:01.687 +05:30 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2023-11-20 16:25:01.687 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.688 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.688 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-20 16:25:01.692 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-20 16:25:01.693 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.693 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (0ms).
+2023-11-20 16:25:01.734 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-11-20 16:25:01.734 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-11-20 16:25:01.734 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-11-20 16:25:01.735 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.735 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.736 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-20 16:25:01.739 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-20 16:25:01.744 +05:30 [DBG] Closing data reader to 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.748 +05:30 [DBG] A data reader for 'EFLearning' on server 'localhost,1433' is being disposed after spending 5ms reading results.
+2023-11-20 16:25:01.750 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.751 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (0ms).
+2023-11-20 16:25:01.784 +05:30 [INF] Applying migration '20231120105238_AddedUserTable'.
+2023-11-20 16:25:01.869 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.869 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.872 +05:30 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-11-20 16:25:01.886 +05:30 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2023-11-20 16:25:01.889 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-11-20 16:25:01.889 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-11-20 16:25:01.892 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (3ms).
+2023-11-20 16:25:01.893 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [UserId] int NOT NULL IDENTITY,
+    [FirstName] nvarchar(100) NOT NULL,
+    [LastName] nvarchar(100) NOT NULL,
+    [UserPassword] nvarchar(200) NOT NULL,
+    [UserEmail] nvarchar(250) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([UserId])
+);
+2023-11-20 16:25:01.903 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [UserId] int NOT NULL IDENTITY,
+    [FirstName] nvarchar(100) NOT NULL,
+    [LastName] nvarchar(100) NOT NULL,
+    [UserPassword] nvarchar(200) NOT NULL,
+    [UserEmail] nvarchar(250) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([UserId])
+);
+2023-11-20 16:25:01.904 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-11-20 16:25:01.905 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-11-20 16:25:01.905 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-11-20 16:25:01.906 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231120105238_AddedUserTable', N'7.0.13');
+2023-11-20 16:25:01.909 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231120105238_AddedUserTable', N'7.0.13');
+2023-11-20 16:25:01.914 +05:30 [DBG] Committing transaction.
+2023-11-20 16:25:01.923 +05:30 [DBG] Committed transaction.
+2023-11-20 16:25:01.926 +05:30 [DBG] Disposing transaction.
+2023-11-20 16:25:01.927 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.927 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (0ms).
+2023-11-20 16:25:01.932 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-20 16:25:01.936 +05:30 [DBG] Disposing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 16:25:01.939 +05:30 [DBG] Disposed connection to database '' on server '' (2ms).
+2023-11-20 16:26:38.968 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-11-20 16:26:40.164 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: None
+2023-11-20 16:26:40.517 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-20 16:28:23.024 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-11-20 16:28:24.327 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: None
+2023-11-20 16:28:24.670 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-20 16:29:23.537 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-11-20 16:29:24.767 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: None
+2023-11-20 16:29:25.093 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-20 16:34:36.725 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-11-20 16:34:37.923 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: None
+2023-11-20 16:34:38.331 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-20 17:06:13.065 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-11-20 17:06:14.308 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: None
+2023-11-20 17:06:14.347 +05:30 [DBG] Creating DbConnection.
+2023-11-20 17:06:14.426 +05:30 [DBG] Created DbConnection. (70ms).
+2023-11-20 17:06:14.443 +05:30 [DBG] Migrating using database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:14.457 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.471 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.491 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-11-20 17:06:15.510 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (16ms).
+2023-11-20 17:06:15.513 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (33ms).
+2023-11-20 17:06:15.535 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-20 17:06:15.592 +05:30 [INF] Executed DbCommand (66ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-20 17:06:15.596 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.620 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (13ms).
+2023-11-20 17:06:15.629 +05:30 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-11-20 17:06:15.629 +05:30 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-11-20 17:06:15.630 +05:30 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2023-11-20 17:06:15.630 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.632 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.633 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-20 17:06:15.672 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-20 17:06:15.672 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.674 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (1ms).
+2023-11-20 17:06:15.677 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.677 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.678 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-11-20 17:06:15.678 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-11-20 17:06:15.678 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-11-20 17:06:15.679 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-20 17:06:15.684 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-11-20 17:06:15.684 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.685 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (0ms).
+2023-11-20 17:06:15.686 +05:30 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-11-20 17:06:15.686 +05:30 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-11-20 17:06:15.686 +05:30 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2023-11-20 17:06:15.687 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.687 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.688 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-20 17:06:15.690 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-11-20 17:06:15.691 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.691 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (0ms).
+2023-11-20 17:06:15.730 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-11-20 17:06:15.730 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-11-20 17:06:15.730 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-11-20 17:06:15.731 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.731 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.732 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-20 17:06:15.735 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-11-20 17:06:15.740 +05:30 [DBG] Closing data reader to 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.743 +05:30 [DBG] A data reader for 'EFLearning' on server 'localhost,1433' is being disposed after spending 4ms reading results.
+2023-11-20 17:06:15.746 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.747 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (0ms).
+2023-11-20 17:06:15.775 +05:30 [INF] Applying migration '20231120110438_AddedUserTableMigration'.
+2023-11-20 17:06:15.865 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.865 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.868 +05:30 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-11-20 17:06:15.881 +05:30 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2023-11-20 17:06:15.883 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-11-20 17:06:15.885 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (1ms).
+2023-11-20 17:06:15.889 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (5ms).
+2023-11-20 17:06:15.889 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [UserId] int NOT NULL IDENTITY,
+    [FirstName] nvarchar(100) NOT NULL,
+    [LastName] nvarchar(100) NOT NULL,
+    [UserPassword] nvarchar(200) NOT NULL,
+    [UserEmail] nvarchar(250) NOT NULL,
+    [CreatedOn] datetime2 NOT NULL,
+    [CreatedBy] nvarchar(max) NOT NULL,
+    [UpdatedOn] datetime2 NOT NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([UserId])
+);
+2023-11-20 17:06:15.899 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [UserId] int NOT NULL IDENTITY,
+    [FirstName] nvarchar(100) NOT NULL,
+    [LastName] nvarchar(100) NOT NULL,
+    [UserPassword] nvarchar(200) NOT NULL,
+    [UserEmail] nvarchar(250) NOT NULL,
+    [CreatedOn] datetime2 NOT NULL,
+    [CreatedBy] nvarchar(max) NOT NULL,
+    [UpdatedOn] datetime2 NOT NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([UserId])
+);
+2023-11-20 17:06:15.900 +05:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-11-20 17:06:15.901 +05:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-11-20 17:06:15.901 +05:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-11-20 17:06:15.901 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231120110438_AddedUserTableMigration', N'7.0.13');
+2023-11-20 17:06:15.904 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20231120110438_AddedUserTableMigration', N'7.0.13');
+2023-11-20 17:06:15.909 +05:30 [DBG] Committing transaction.
+2023-11-20 17:06:15.919 +05:30 [DBG] Committed transaction.
+2023-11-20 17:06:15.923 +05:30 [DBG] Disposing transaction.
+2023-11-20 17:06:15.925 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.927 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (1ms).
+2023-11-20 17:06:15.931 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-20 17:06:15.934 +05:30 [DBG] Disposing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-20 17:06:15.936 +05:30 [DBG] Disposed connection to database '' on server '' (2ms).
+2023-11-23 12:02:46.339 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-11-23 12:02:47.675 +05:30 [DBG] Hosting starting
+2023-11-23 12:02:47.859 +05:30 [INF] User profile is available. Using '/home/rahul/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2023-11-23 12:02:47.923 +05:30 [DBG] Reading data from file '/home/rahul/.aspnet/DataProtection-Keys/key-4036704d-369f-48d6-9c56-d8cfbb602e9d.xml'.
+2023-11-23 12:02:48.254 +05:30 [DBG] Found key {4036704d-369f-48d6-9c56-d8cfbb602e9d}.
+2023-11-23 12:02:48.591 +05:30 [DBG] Considering key {4036704d-369f-48d6-9c56-d8cfbb602e9d} with expiration date 2024-01-25 04:42:12Z as default key.
+2023-11-23 12:02:48.673 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-11-23 12:02:48.688 +05:30 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2023-11-23 12:02:48.692 +05:30 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2023-11-23 12:02:48.827 +05:30 [DBG] Using key {4036704d-369f-48d6-9c56-d8cfbb602e9d} as the default key.
+2023-11-23 12:02:48.839 +05:30 [DBG] Key ring with default key {4036704d-369f-48d6-9c56-d8cfbb602e9d} was loaded during application startup.
+2023-11-23 12:02:50.294 +05:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 5064DAA05F471EB6693E9A8289662C95D9A2D4AF)
+2023-11-23 12:02:52.036 +05:30 [INF] Now listening on: https://localhost:7182
+2023-11-23 12:02:52.036 +05:30 [INF] Now listening on: http://localhost:5091
+2023-11-23 12:02:52.041 +05:30 [DBG] Loaded hosting startup assembly TrainingAPI
+2023-11-23 12:02:52.045 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-23 12:02:52.049 +05:30 [INF] Hosting environment: Development
+2023-11-23 12:02:52.052 +05:30 [INF] Content root path: /home/rahul/SourceCode/TrainingSessions/api-training/TrainingAPI/
+2023-11-23 12:02:52.055 +05:30 [DBG] Hosting started
+2023-11-23 12:02:53.304 +05:30 [DBG] Connection id "0HMVBTO2QMO28" accepted.
+2023-11-23 12:02:53.307 +05:30 [DBG] Connection id "0HMVBTO2QMO28" started.
+2023-11-23 12:02:53.310 +05:30 [DBG] Connection id "0HMVBTO2QMO29" accepted.
+2023-11-23 12:02:53.316 +05:30 [DBG] Connection id "0HMVBTO2QMO29" started.
+2023-11-23 12:02:53.448 +05:30 [DBG] Connection id "0HMVBTO2QMO28" received FIN.
+2023-11-23 12:02:53.455 +05:30 [DBG] Connection id "0HMVBTO2QMO29" received FIN.
+2023-11-23 12:02:53.463 +05:30 [DBG] Connection id "0HMVBTO2QMO2A" accepted.
+2023-11-23 12:02:53.478 +05:30 [DBG] Connection id "0HMVBTO2QMO2A" started.
+2023-11-23 12:02:53.545 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:0A000416:SSL routines::sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-11-23 12:02:53.567 +05:30 [DBG] Connection 0HMVBTO2QMO2A established using the following protocol: "Tls13"
+2023-11-23 12:02:53.549 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:0A000416:SSL routines::sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-11-23 12:02:53.642 +05:30 [DBG] Connection id "0HMVBTO2QMO28" stopped.
+2023-11-23 12:02:53.644 +05:30 [DBG] Connection id "0HMVBTO2QMO29" stopped.
+2023-11-23 12:02:53.645 +05:30 [DBG] Connection id "0HMVBTO2QMO28" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-23 12:02:53.656 +05:30 [DBG] Connection id "0HMVBTO2QMO29" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-23 12:02:53.875 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger - -
+2023-11-23 12:02:53.880 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-11-23 12:02:53.968 +05:30 [DBG] No candidates found for the request path '/swagger'
+2023-11-23 12:02:53.969 +05:30 [DBG] Request did not match any endpoints
+2023-11-23 12:02:54.099 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger - - - 301 0 - 238.5297ms
+2023-11-23 12:02:54.099 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - -
+2023-11-23 12:02:54.101 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-11-23 12:02:54.103 +05:30 [DBG] Request did not match any endpoints
+2023-11-23 12:02:55.015 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - - - 200 - text/html;charset=utf-8 916.0637ms
+2023-11-23 12:02:55.097 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - -
+2023-11-23 12:02:55.098 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-11-23 12:02:55.098 +05:30 [DBG] Request did not match any endpoints
+2023-11-23 12:02:55.115 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - -
+2023-11-23 12:02:55.115 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2023-11-23 12:02:55.116 +05:30 [DBG] Request did not match any endpoints
+2023-11-23 12:02:55.117 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - -
+2023-11-23 12:02:55.117 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2023-11-23 12:02:55.117 +05:30 [DBG] Request did not match any endpoints
+2023-11-23 12:02:55.362 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-11-23 12:02:55.369 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-11-23 12:02:55.392 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-11-23 12:02:55.415 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 300.3455ms
+2023-11-23 12:02:55.417 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - - - 200 144929 text/css 319.5393ms
+2023-11-23 12:02:55.420 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 303.6492ms
+2023-11-23 12:02:56.588 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - -
+2023-11-23 12:02:56.588 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-11-23 12:02:56.588 +05:30 [DBG] Request did not match any endpoints
+2023-11-23 12:02:56.658 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - -
+2023-11-23 12:02:56.658 +05:30 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-11-23 12:02:56.658 +05:30 [DBG] Request did not match any endpoints
+2023-11-23 12:02:56.659 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-11-23 12:02:56.659 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - - - 200 628 image/png 1.3900ms
+2023-11-23 12:02:57.156 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 568.7220ms
+2023-11-23 12:03:49.727 +05:30 [DBG] Connection id "0HMVBTO2QMO2A" received FIN.
+2023-11-23 12:03:49.760 +05:30 [DBG] Connection id "0HMVBTO2QMO2A" is closed. The last processed stream ID was 13.
+2023-11-23 12:03:49.761 +05:30 [DBG] Connection id "0HMVBTO2QMO2A" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-23 12:03:49.763 +05:30 [DBG] Connection id "0HMVBTO2QMO2A" stopped.
+2023-11-23 12:04:18.505 +05:30 [DBG] Connection id "0HMVBTO2QMO2B" accepted.
+2023-11-23 12:04:18.506 +05:30 [DBG] Connection id "0HMVBTO2QMO2B" started.
+2023-11-23 12:04:18.506 +05:30 [DBG] Connection id "0HMVBTO2QMO2C" accepted.
+2023-11-23 12:04:18.514 +05:30 [DBG] Connection id "0HMVBTO2QMO2C" started.
+2023-11-23 12:04:18.536 +05:30 [DBG] Connection id "0HMVBTO2QMO2B" received FIN.
+2023-11-23 12:04:18.538 +05:30 [DBG] Connection id "0HMVBTO2QMO2C" received FIN.
+2023-11-23 12:04:18.542 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:0A000416:SSL routines::sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-11-23 12:04:18.545 +05:30 [DBG] Connection id "0HMVBTO2QMO2B" stopped.
+2023-11-23 12:04:18.543 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:0A000416:SSL routines::sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-11-23 12:04:18.546 +05:30 [DBG] Connection id "0HMVBTO2QMO2C" stopped.
+2023-11-23 12:04:18.546 +05:30 [DBG] Connection id "0HMVBTO2QMO2B" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-23 12:04:18.547 +05:30 [DBG] Connection id "0HMVBTO2QMO2C" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-23 12:04:22.409 +05:30 [DBG] Connection id "0HMVBTO2QMO2D" accepted.
+2023-11-23 12:04:22.412 +05:30 [DBG] Connection id "0HMVBTO2QMO2D" started.
+2023-11-23 12:04:22.417 +05:30 [DBG] Connection id "0HMVBTO2QMO2E" accepted.
+2023-11-23 12:04:22.417 +05:30 [DBG] Connection id "0HMVBTO2QMO2E" started.
+2023-11-23 12:04:22.430 +05:30 [DBG] Connection id "0HMVBTO2QMO2D" received FIN.
+2023-11-23 12:04:22.430 +05:30 [DBG] Connection id "0HMVBTO2QMO2E" received FIN.
+2023-11-23 12:04:22.431 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:0A000416:SSL routines::sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-11-23 12:04:22.437 +05:30 [DBG] Connection id "0HMVBTO2QMO2D" stopped.
+2023-11-23 12:04:22.433 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:0A000416:SSL routines::sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-11-23 12:04:22.438 +05:30 [DBG] Connection id "0HMVBTO2QMO2E" stopped.
+2023-11-23 12:04:22.438 +05:30 [DBG] Connection id "0HMVBTO2QMO2E" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-23 12:04:22.439 +05:30 [DBG] Connection id "0HMVBTO2QMO2D" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-23 12:04:25.869 +05:30 [DBG] Connection id "0HMVBTO2QMO2F" accepted.
+2023-11-23 12:04:25.872 +05:30 [DBG] Connection id "0HMVBTO2QMO2F" started.
+2023-11-23 12:04:25.898 +05:30 [DBG] Connection id "0HMVBTO2QMO2G" accepted.
+2023-11-23 12:04:25.900 +05:30 [DBG] Connection id "0HMVBTO2QMO2H" accepted.
+2023-11-23 12:04:25.902 +05:30 [DBG] Connection id "0HMVBTO2QMO2G" started.
+2023-11-23 12:04:25.919 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:0A000416:SSL routines::sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-11-23 12:04:25.926 +05:30 [DBG] Connection id "0HMVBTO2QMO2F" stopped.
+2023-11-23 12:04:25.928 +05:30 [DBG] Connection id "0HMVBTO2QMO2F" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-23 12:04:25.951 +05:30 [DBG] Connection id "0HMVBTO2QMO2H" started.
+2023-11-23 12:04:25.974 +05:30 [DBG] Connection id "0HMVBTO2QMO2G" received FIN.
+2023-11-23 12:04:25.975 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:0A000416:SSL routines::sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-11-23 12:04:25.981 +05:30 [DBG] Connection id "0HMVBTO2QMO2G" stopped.
+2023-11-23 12:04:25.983 +05:30 [DBG] Connection id "0HMVBTO2QMO2G" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-23 12:04:25.990 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> Interop+OpenSsl+SslException: SSL Handshake failed with OpenSSL error - SSL_ERROR_SSL.
+ ---> Interop+Crypto+OpenSslCryptographicException: error:0A000416:SSL routines::sslv3 alert certificate unknown
+   --- End of inner exception stack trace ---
+   at Interop.OpenSsl.DoSslHandshake(SafeSslHandle context, ReadOnlySpan`1 input, Byte[]& sendBuf, Int32& sendCount)
+   at System.Net.Security.SslStreamPal.HandshakeInternal(SafeFreeCredentials credential, SafeDeleteSslContext& context, ReadOnlySpan`1 inputBuffer, Byte[]& outputBuffer, SslAuthenticationOptions sslAuthenticationOptions)
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-11-23 12:04:25.992 +05:30 [DBG] Connection id "0HMVBTO2QMO2H" stopped.
+2023-11-23 12:04:25.993 +05:30 [DBG] Connection id "0HMVBTO2QMO2H" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-23 12:04:25.994 +05:30 [DBG] Connection id "0HMVBTO2QMO2I" accepted.
+2023-11-23 12:04:25.995 +05:30 [DBG] Connection id "0HMVBTO2QMO2I" started.
+2023-11-23 12:04:26.005 +05:30 [DBG] Connection 0HMVBTO2QMO2I established using the following protocol: "Tls13"
+2023-11-23 12:04:26.008 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger - -
+2023-11-23 12:04:26.008 +05:30 [DBG] No candidates found for the request path '/swagger'
+2023-11-23 12:04:26.009 +05:30 [DBG] Request did not match any endpoints
+2023-11-23 12:04:26.009 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger - - - 301 0 - 0.9496ms
+2023-11-23 12:04:26.014 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/index.html - -
+2023-11-23 12:04:26.014 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-11-23 12:04:26.014 +05:30 [DBG] Request did not match any endpoints
+2023-11-23 12:04:26.016 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/index.html - - - 200 - text/html;charset=utf-8 1.9434ms
+2023-11-23 12:04:26.055 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - -
+2023-11-23 12:04:26.055 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-11-23 12:04:26.055 +05:30 [DBG] Request did not match any endpoints
+2023-11-23 12:04:26.057 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-11-23 12:04:26.058 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui.css - - - 200 144929 text/css 2.9798ms
+2023-11-23 12:04:26.077 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - -
+2023-11-23 12:04:26.077 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2023-11-23 12:04:26.077 +05:30 [DBG] Request did not match any endpoints
+2023-11-23 12:04:26.087 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - -
+2023-11-23 12:04:26.087 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2023-11-23 12:04:26.087 +05:30 [DBG] Request did not match any endpoints
+2023-11-23 12:04:26.090 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-11-23 12:04:26.091 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 4.0792ms
+2023-11-23 12:04:26.111 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-11-23 12:04:26.111 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 34.6449ms
+2023-11-23 12:04:27.211 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - -
+2023-11-23 12:04:27.212 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-11-23 12:04:27.212 +05:30 [DBG] Request did not match any endpoints
+2023-11-23 12:04:27.235 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 25.6628ms
+2023-11-23 12:04:27.276 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - -
+2023-11-23 12:04:27.276 +05:30 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-11-23 12:04:27.276 +05:30 [DBG] Request did not match any endpoints
+2023-11-23 12:04:27.277 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-11-23 12:04:27.277 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/swagger/favicon-32x32.png - - - 200 628 image/png 1.3938ms
+2023-11-23 12:04:42.380 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7182/api/Authentication?userName=Test&password=Password - -
+2023-11-23 12:04:42.470 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Authentication'
+2023-11-23 12:04:42.503 +05:30 [DBG] Endpoint 'TrainingAPI.Controllers.AuthenticationController.ValidateUser (TrainingAPI)' with route pattern 'api/Authentication' is valid for the request path '/api/Authentication'
+2023-11-23 12:04:42.514 +05:30 [DBG] Request matched endpoint 'TrainingAPI.Controllers.AuthenticationController.ValidateUser (TrainingAPI)'
+2023-11-23 12:04:42.515 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2023-11-23 12:04:42.736 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2023-11-23 12:04:42.747 +05:30 [INF] Executing endpoint 'TrainingAPI.Controllers.AuthenticationController.ValidateUser (TrainingAPI)'
+2023-11-23 12:04:42.941 +05:30 [INF] Route matched with {action = "ValidateUser", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Core.ViewModels.AuthModel] ValidateUser(System.String, System.String) on controller TrainingAPI.Controllers.AuthenticationController (TrainingAPI).
+2023-11-23 12:04:42.946 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-11-23 12:04:42.947 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-11-23 12:04:42.948 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-11-23 12:04:42.948 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-11-23 12:04:42.949 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-11-23 12:04:42.952 +05:30 [DBG] Executing controller factory for controller TrainingAPI.Controllers.AuthenticationController (TrainingAPI)
+2023-11-23 12:04:43.723 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-11-23 12:04:43.855 +05:30 [DBG] Executed controller factory for controller TrainingAPI.Controllers.AuthenticationController (TrainingAPI)
+2023-11-23 12:04:43.899 +05:30 [DBG] Attempting to bind parameter 'userName' of type 'System.String' ...
+2023-11-23 12:04:43.915 +05:30 [DBG] Attempting to bind parameter 'userName' of type 'System.String' using the name 'userName' in request data ...
+2023-11-23 12:04:43.920 +05:30 [DBG] Done attempting to bind parameter 'userName' of type 'System.String'.
+2023-11-23 12:04:43.920 +05:30 [DBG] Done attempting to bind parameter 'userName' of type 'System.String'.
+2023-11-23 12:04:43.921 +05:30 [DBG] Attempting to validate the bound parameter 'userName' of type 'System.String' ...
+2023-11-23 12:04:43.944 +05:30 [DBG] Done attempting to validate the bound parameter 'userName' of type 'System.String'.
+2023-11-23 12:04:43.956 +05:30 [DBG] Attempting to bind parameter 'password' of type 'System.String' ...
+2023-11-23 12:04:43.960 +05:30 [DBG] Attempting to bind parameter 'password' of type 'System.String' using the name 'password' in request data ...
+2023-11-23 12:04:43.961 +05:30 [DBG] Done attempting to bind parameter 'password' of type 'System.String'.
+2023-11-23 12:04:43.963 +05:30 [DBG] Done attempting to bind parameter 'password' of type 'System.String'.
+2023-11-23 12:04:43.963 +05:30 [DBG] Attempting to validate the bound parameter 'password' of type 'System.String' ...
+2023-11-23 12:04:43.965 +05:30 [DBG] Done attempting to validate the bound parameter 'password' of type 'System.String'.
+2023-11-23 12:04:47.584 +05:30 [DBG] Entity Framework Core 7.0.13 initialized 'EFLearningContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.13' with options: None
+2023-11-23 12:04:48.136 +05:30 [DBG] Compiling query expression: 
+'DbSet<User>()
+    .FirstOrDefault(x => x.UserEmail.Equals(__userName_0) && x.UserPassword.Equals(__password_1))'
+2023-11-23 12:04:49.437 +05:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<User>(
+    asyncEnumerable: new SingleQueryingEnumerable<User>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.UserId (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.CreatedBy (string) Required, 1], [Property: User.CreatedOn (DateTime) Required, 2], [Property: User.FirstName (string) Required MaxLength(100), 3], [Property: User.LastName (string) Required MaxLength(100), 4], [Property: User.UpdatedBy (string), 5], [Property: User.UpdatedOn (DateTime) Required, 6], [Property: User.UserEmail (string) Required MaxLength(250), 7], [Property: User.UserPassword (string) Required MaxLength(200), 8] }
+            SELECT TOP(1) u.UserId, u.CreatedBy, u.CreatedOn, u.FirstName, u.LastName, u.UpdatedBy, u.UpdatedOn, u.UserEmail, u.UserPassword
+            FROM Users AS u
+            WHERE (u.UserEmail == @__userName_0) && (u.UserPassword == @__password_1)), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+        Domain.EFLearningContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2023-11-23 12:04:49.747 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-11-23 12:04:49.759 +05:30 [DBG] Creating DbConnection.
+2023-11-23 12:04:49.933 +05:30 [DBG] Created DbConnection. (146ms).
+2023-11-23 12:04:49.967 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (223ms).
+2023-11-23 12:04:50.059 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (318ms).
+2023-11-23 12:04:50.093 +05:30 [DBG] Opening connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-23 12:04:51.245 +05:30 [DBG] Opened connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-23 12:04:51.339 +05:30 [DBG] Executing DbCommand [Parameters=[@__userName_0='?' (Size = 250), @__password_1='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[CreatedBy], [u].[CreatedOn], [u].[FirstName], [u].[LastName], [u].[UpdatedBy], [u].[UpdatedOn], [u].[UserEmail], [u].[UserPassword]
+FROM [Users] AS [u]
+WHERE [u].[UserEmail] = @__userName_0 AND [u].[UserPassword] = @__password_1
+2023-11-23 12:04:51.773 +05:30 [INF] Executed DbCommand (453ms) [Parameters=[@__userName_0='?' (Size = 250), @__password_1='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[CreatedBy], [u].[CreatedOn], [u].[FirstName], [u].[LastName], [u].[UpdatedBy], [u].[UpdatedOn], [u].[UserEmail], [u].[UserPassword]
+FROM [Users] AS [u]
+WHERE [u].[UserEmail] = @__userName_0 AND [u].[UserPassword] = @__password_1
+2023-11-23 12:04:51.884 +05:30 [DBG] Closing data reader to 'EFLearning' on server 'localhost,1433'.
+2023-11-23 12:04:51.977 +05:30 [DBG] A data reader for 'EFLearning' on server 'localhost,1433' is being disposed after spending 123ms reading results.
+2023-11-23 12:04:52.011 +05:30 [DBG] Closing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-23 12:04:52.062 +05:30 [DBG] Closed connection to database 'EFLearning' on server 'localhost,1433' (49ms).
+2023-11-23 12:04:52.091 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-11-23 12:04:52.116 +05:30 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2023-11-23 12:04:52.119 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter' and content type 'text/plain' to write the response.
+2023-11-23 12:04:52.121 +05:30 [INF] Executing ObjectResult, writing value of type 'null'.
+2023-11-23 12:04:52.156 +05:30 [INF] Executed action TrainingAPI.Controllers.AuthenticationController.ValidateUser (TrainingAPI) in 9176.2893ms
+2023-11-23 12:04:52.170 +05:30 [INF] Executed endpoint 'TrainingAPI.Controllers.AuthenticationController.ValidateUser (TrainingAPI)'
+2023-11-23 12:04:52.243 +05:30 [DBG] 'EFLearningContext' disposed.
+2023-11-23 12:04:52.333 +05:30 [DBG] Disposing connection to database 'EFLearning' on server 'localhost,1433'.
+2023-11-23 12:04:52.358 +05:30 [DBG] Disposed connection to database '' on server '' (40ms).
+2023-11-23 12:04:52.371 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7182/api/Authentication?userName=Test&password=Password - - - 204 0 - 9990.9357ms
+2023-11-23 12:05:56.139 +05:30 [DBG] Connection id "0HMVBTO2QMO2I" received FIN.
+2023-11-23 12:05:56.157 +05:30 [DBG] Connection id "0HMVBTO2QMO2I" is closed. The last processed stream ID was 15.
+2023-11-23 12:05:56.168 +05:30 [DBG] Connection id "0HMVBTO2QMO2I" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-11-23 12:05:56.169 +05:30 [DBG] Connection id "0HMVBTO2QMO2I" stopped.
+2023-11-24 16:59:54.639 +05:30 [INF] Application is shutting down...
+2023-11-24 16:59:54.644 +05:30 [DBG] Hosting stopping
+2023-11-24 16:59:54.682 +05:30 [DBG] Hosting stopped

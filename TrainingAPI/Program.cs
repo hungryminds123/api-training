@@ -53,12 +53,9 @@ namespace TrainingAPI
                 .ReadFrom.Configuration(configuration)
                 .CreateLogger();
             builder.Services.RegisterSwagger();
-            
             builder.Services.AddSerilog(serilog);
-            
             builder.Services.AddControllers();
-
-
+            
            // builder.Services.AddCors();
 
             builder.Services.AddCors(options =>

@@ -1,7 +1,7 @@
 using Core.Models;
+using TrainingAPI.Extensions;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using TrainingAPI.Extensions;
 
 namespace TrainingAPI.OptionSetup;
 
@@ -10,7 +10,6 @@ public class JwtBearerOptionSetup : IConfigureNamedOptions<JwtBearerOptions>
 
     private readonly JwtModel _jwtOptions;
     
-
     public JwtBearerOptionSetup(
         IOptions<JwtModel> jwtOptions)
     {
@@ -18,7 +17,8 @@ public class JwtBearerOptionSetup : IConfigureNamedOptions<JwtBearerOptions>
     }
 
     public void Configure(
-        string name, JwtBearerOptions options)
+        string name, 
+        JwtBearerOptions options)
     {
         options.RequireHttpsMetadata = false;
         options.SaveToken = true;
